@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-export const intro={
+const intro={
   content:style({
     margin:"50px auto auto auto",
     display:"inline-block",
@@ -65,3 +65,5 @@ export const intro={
     padding:"0"
   })
 }
+
+export default intro;

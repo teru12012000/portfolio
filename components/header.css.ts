@@ -1,6 +1,6 @@
 import { style } from "@vanilla-extract/css";
 
-export const head={
+const head={
   header:style({
     display:"flex",
     justifyContent:"space-between",
@@ -58,3 +58,4 @@ export const head={
   }),
 };
 
+export default head;

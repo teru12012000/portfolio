@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import Header from './components/Header'
-import Profile from './components/Profile'
-import Skils from './components/Skils'
+import Header from '../components/Header'
+import Profile from '../components/Profile'
+import Skils from '../components/Skils'
 const Home: NextPage = () => {
   return (
     <>

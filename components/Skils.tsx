@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import { intro } from './styles/profile.css';
-import { skils } from './styles/skils.css';
+import intro  from './profile.css';
+import skils  from './skils.css';
 import Link from 'next/link';
 import Head from 'next/head';
 type icons={

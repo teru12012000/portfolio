@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-export const skils={
+const skils={
   content:style({
     margin:"50px auto auto auto",
     border:"2px solid black",
@@ -37,3 +37,4 @@ export const skils={
     }
   })
 }
+export default skils;
