@@ -24,6 +24,15 @@ const Skils: NextPage = () => {
     {
       link:'/img/ts.png'
     },
+    {
+      link:'/img/php.png'
+    },
+    {
+      link:'/img/node.png'
+    },
+    {
+      link:'/img/react.png'
+    },
     
   ]
   return (
