@@ -2,16 +2,17 @@ import { style } from "@vanilla-extract/css";
 const intro={
   content:style({
     margin:"50px auto auto auto",
-    height:"400px",
+    height:"420px",
     display:"inline-block",
     border:"2px solid gray",
+    
     '@media':{
       'screen and (min-width:281px)':{
         display:"flex",
         justifyContent:"center",
       },
       'screen and (max-width:280px)':{
-        height:"800px"
+        height:"820px"
       },
       'screen and (min-width:1000px)':{
         width:"1000px",
@@ -41,7 +42,7 @@ const intro={
   passage:style({
     textAlign:"center",
     overflow:"auto",
-    height:"400px",
+    height:"430px",
     width:"400px",
     whiteSpace: "nowrap",
     boxSizing:"border-box",

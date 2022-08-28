@@ -26,6 +26,10 @@ const Profile: NextPage = () => {
       answer:'東京理科大学'
     },
     {
+      question:"学部学科",
+      answer:'工学部情報工学科'
+    },
+    {
       question:"中学部活動",
       answer:'サッカー部'
     },

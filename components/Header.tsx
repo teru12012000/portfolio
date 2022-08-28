@@ -8,7 +8,7 @@ const Header: NextPage = () => {
   return (
     <>
       <header className={head.header}>
-        <h1 className={head.h1}>TERUSHI</h1>
+        <h1 className={head.h1}>TERUSI</h1>
         <ul className={head.ul}>
           <li className={head.list}>
             <Link href="https://github.com/teru12012000">
