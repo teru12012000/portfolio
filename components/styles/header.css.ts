@@ -22,10 +22,10 @@ const head={
   }),
   list:style({
     display:"inline-block",
-    margin:"15px 0 0 15px",
+    margin:"20px 0 0 20px",
     '@media':{
-      'screen and (max-width:500px)':{
-        margin:"20px 0 0 0"
+      'screen and (max-width:400px)':{
+        margin:"15px 0 0 0"
       },
       'screen and (max-width:300px)':{
         margin:"10px 0 0 0",
@@ -35,26 +35,30 @@ const head={
   }),
   link:style({
     marginRight:"10px",
-    backgroundColor:"#33FFCC",
-    fontSize:"20px",
-    padding: "10px",
     color:"white",
     borderRadius:"20%",
-    ':hover':{
-      backgroundColor:"orange",
-      transition:"0.4s"
-    },
+    width:"40px",
+    height:"40px",
     '@media':{
       'screen and (max-width:500px)':{
         fontSize:"15px",
-        padding:"5px",
       },
       'screen and (max-width:400px)':{
         fontSize:"10px",
-        padding:"5px",
       }
 
     }
+  }),
+  icon:style({
+    width:"35px",
+    height:"35px",
+    ':hover':{
+      color:"aqua",
+      transition:"0.4s"
+    }
+  }),
+  ul:style({
+    margin:"10px"
   }),
 };
 

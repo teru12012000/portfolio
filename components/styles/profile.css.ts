@@ -2,12 +2,16 @@ import { style } from "@vanilla-extract/css";
 const intro={
   content:style({
     margin:"50px auto auto auto",
+    height:"400px",
     display:"inline-block",
     border:"2px solid black",
     '@media':{
       'screen and (min-width:281px)':{
         display:"flex",
         justifyContent:"center",
+      },
+      'screen and (max-width:280px)':{
+        height:"800px"
       },
       'screen and (min-width:1000px)':{
         width:"1000px",
@@ -20,16 +24,14 @@ const intro={
     width:"200px",
     position:"relative",
     '@media':{
-      'screen and (max-width:540px)':{
-        height:"600px",
-    },
-    'screen and (max-width:412px)':{
+    'screen and (max-width:414px)':{
       width:"45%",
-      height:"300px",
+      height:"400px",
     },
     'screen and (max-width:280px)':{
       width:"100%",
-      height:"300px",
+      height:"200px",
+      margin:"auto"
     }
    }
   }),
@@ -47,9 +49,9 @@ const intro={
       'screen and (max-width:540px)':{
         height:"600px",
       },
-      'screen and (max-width:412px)':{
+      'screen and (max-width:414px)':{
         width:"276px",
-        height:"300px",
+        height:"400px",
       },
     }
   }),
