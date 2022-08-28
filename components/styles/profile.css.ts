@@ -4,7 +4,7 @@ const intro={
     margin:"50px auto auto auto",
     height:"400px",
     display:"inline-block",
-    border:"2px solid black",
+    border:"2px solid gray",
     '@media':{
       'screen and (min-width:281px)':{
         display:"flex",
