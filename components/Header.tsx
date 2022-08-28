@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import head from './header.css';
+import head from './styles/header.css';
 import Link from 'next/link';
 
 const Header: NextPage = () => {

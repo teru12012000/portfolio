@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import intro from './profile.css';
+import intro from './styles/profile.css';
 import Link from 'next/link';
 type my_profile={
   question:string;
