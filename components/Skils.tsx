@@ -5,10 +5,77 @@ import skils  from './styles/skils.css';
 import Link from 'next/link';
 import Head from 'next/head';
 import Modal from 'react-modal';
+import { handleWebpackExtenalForEdgeRuntime } from 'next/dist/build/webpack/plugins/middleware-plugin';
+import { useState } from 'react';
 type icons={
   link:string;
 }
+type lang={
+  langage:string;
+  start:string;
+  level:string;
+}
+Modal.setAppElement('#__next');
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    
+  },
+};
 const Skils: NextPage = () => {
+  const [modalIsOpen,setModalIsOpen]=useState(false);
+  const Skil:lang[]=[
+    {
+      langage:"C",
+      start:"18歳",
+      level:"ライブラリは調べないと厳しいが基本的な文法は理解している。"
+    },
+    {
+      langage:"C++",
+      start:"19歳",
+      level:"ライブラリは調べないと厳しいが基本的な文法は理解している。"
+    },
+    {
+      langage:"python",
+      start:"19歳",
+      level:"リストの操作やpandasなどといったパッケージの使い方が完璧でない。"
+    },
+    {
+      langage:"Javascript",
+      start:"20歳",
+      level:"DOM取得や基本的な書き方については理解しているが、日付取得など調べないとできない部分もある。"
+    },
+    {
+      langage:"Typescript",
+      start:"21歳",
+      level:"Nextjs等で使用しているが、今のところ迷いなく使えている。今後詰まる可能性あり。"
+    },
+    {
+      langage:"php",
+      start:"20歳",
+      level:"実験で使用したことがあり文法は覚えているが配列操作などわからない部分がいまだに多い。最近は全く使っていない。"
+    },
+    {
+      langage:"html,css",
+      start:"18歳",
+      level:"htmlに関しては調べることはたまにあるがスムーズに書ける方だと思う。cssは調べることが多い。displayの部分などまだ理解できていない。"
+    },
+    {
+      langage:"Nodejs",
+      start:"21歳",
+      level:"JSで動画を見ながらサーバーを構築してみたが理解できない部分がほとんど。"
+    },
+    {
+      langage:"React",
+      start:"21歳",
+      level:"最近主に使っている。勉強中なので理解できていないところが多い。このサイトはNextjsを使用している。"
+    }
+  ]
   const langage:icons[]=[
     {
       link:'/img/Clang.png'
@@ -42,12 +109,53 @@ const Skils: NextPage = () => {
     },
     
   ]
+  const closeModal=()=>{
+    setModalIsOpen(false);
+  }
+  const handlebtn=()=>{
+    setModalIsOpen(true);
+  }
   return (
     <>
-      <Head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"/>
-      </Head>
       <div className={skils.content} id="intro">
+      <Modal
+         isOpen={modalIsOpen}
+         onRequestClose={closeModal}
+         style={customStyles}
+      >
+      <div className={skils.modal}>
+          <table border={1} className={skils.table}>
+            <thead>
+              <tr className={skils.head}>
+                <td className={skils.tskil}>
+                  スキル
+                </td>
+                <td className={skils.tstart}>
+                  開始時
+                </td>
+                <td>
+                  レベル
+                </td>
+              </tr>
+            </thead>
+            {Skil.map((item,index)=>(
+              <tbody key={index}>
+                <tr key={index} className={skils.body}>
+                  <td className={skils.tskil}>{item.langage}</td>
+                  <td>{item.start}</td>
+                  <td>{item.level}</td>
+                </tr>
+              </tbody>
+            ))}
+          </table>
+          <button 
+            onClick={closeModal}
+            className={skils.btn1}
+          >
+            close
+          </button>
+        </div>
+      </Modal>
         <h2 className={skils.h2}>スキル</h2>
         <div className={skils.box}>
           {langage.map((item,index)=>(
@@ -60,6 +168,12 @@ const Skils: NextPage = () => {
           </figure>
           ))}
         </div>
+        <button 
+          className={skils.btn}
+          onClick={()=>handlebtn()}
+        >
+          詳細を見る
+        </button>
      </div>
     </>
   )
