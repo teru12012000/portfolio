@@ -62,13 +62,15 @@ const skils={
     marginTop:"10px",
    backgroundColor:"yellow",
    color:"red",
-   borderRadius:"30%"
+   borderRadius:"30%",
+   cursor:"pointer",
   }),
   btn1:style({
     marginTop:"10px",
     backgroundColor:"yellow",
     color:"red",
-    borderRadius:"30%"
+    borderRadius:"30%",
+    cursor:"pointer",
   }),
   head:style({
     backgroundColor:"black",

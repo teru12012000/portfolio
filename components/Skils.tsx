@@ -43,7 +43,7 @@ const Skils: NextPage = () => {
     {
       langage:"python",
       start:"19歳",
-      level:"リストの操作やpandasなどといったパッケージの使い方が完璧でない。"
+      level:"リストの操作やpandasなどの使い方が完璧でない。"
     },
     {
       langage:"Javascript",
