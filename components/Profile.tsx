@@ -11,7 +11,7 @@ const Profile: NextPage = () => {
   const my_intro:my_profile[]=[
     {
       question:"出身地",
-      answer:'茨城県'
+      answer:'茨城県坂東市'
     },
     {
       question:"生年月日",

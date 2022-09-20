@@ -74,6 +74,11 @@ const Skils: NextPage = () => {
       langage:"React",
       start:"21歳",
       level:"最近主に使っている。勉強中なので理解できていないところが多い。このサイトはNextjsを使用している。"
+    },
+    {
+      langage:"Java",
+      start:"21歳",
+      level:"文法とclassを勉強中。今後GUIプログラミングについても勉強予定。"
     }
   ]
   const langage:icons[]=[
@@ -107,6 +112,9 @@ const Skils: NextPage = () => {
     {
       link:'/img/react.png'
     },
+    {
+      link:'/img/java.png'
+    },
     
   ]
   const closeModal=()=>{
@@ -134,7 +142,7 @@ const Skils: NextPage = () => {
                   開始時
                 </td>
                 <td>
-                  レベル
+                  詳細
                 </td>
               </tr>
             </thead>
