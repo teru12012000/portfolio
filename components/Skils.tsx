@@ -68,7 +68,7 @@ const Skils: NextPage = () => {
     {
       langage:"Nodejs",
       start:"21歳",
-      level:"JSで動画を見ながらサーバーを構築してみたが理解できない部分がほとんど。"
+      level:"動画を見ながらサーバーを構築してみたが理解できない部分がほとんど。"
     },
     {
       langage:"React",
