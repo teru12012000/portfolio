@@ -18,7 +18,12 @@ const home={
     ':hover':{
       backgroundColor:"black",
       transition:"0.4s"
-    }
+    },
+    '@media':{
+      'screen and (min-width:900px)':{
+        fontSize:"25px",
+      }
+    },
   }),
   img:style({
     margin:"auto",
@@ -32,13 +37,27 @@ const home={
   }),
   li:style({
     listStyle:"none",
-    margin:"10px"
+    margin:"10px",
+    '@media':{
+      'screen and (min-width:900px)':{
+        margin:"20px",
+    
+      }
+    },
   }),
   p:style({
     fontSize:"13px",
     textAlign:"center",
     width:"200px",
     margin:'15px auto',
+    '@media':{
+      'screen and (min-width:900px)':{
+        width:"300px",
+        fontSize:"20px",
+    
+
+      },
+    }
 
   })
 };
