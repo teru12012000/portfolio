@@ -2,9 +2,24 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Header'
-import Profile from '../components/Profile'
 import Skils from '../components/Skils'
+import home from '../styles/Home.css'
+import Link from 'next/link';
+type menu={
+  link:string,
+  name:string;
+}
 const Home: NextPage = () => {
+  const list:menu[]=[
+    {
+      link:'./myintro',
+      name:'自己紹介'
+    },
+    {
+      link:'./myskil',
+      name:'スキル'
+    }
+  ]
   return (
     <>
       <Head>
@@ -13,8 +28,35 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <Profile/>
-      <Skils/>
+      <div className={home.first}>
+        <figure className={home.img}>
+          <Image
+              src='/img/me.jpg'
+              layout='fill' 
+              alt='logo'
+              className={home.img2}
+          />
+        </figure>
+        <p className={home.p}>
+          はじめまして。TERUSIです。
+          現在大学4年生です。このサイトは
+          私の自己紹介サイトになります。
+          TwitterやGithubを参照したい方は
+          ヘッダーのアイコンをクリックしてください。
+
+        </p>
+      </div>
+      <div className={home.content}>
+        <h1 >menu</h1>
+        {list.map((item,index)=>(
+          <li key={index} className={home.li}>
+            <Link href={item.link}>
+            <a className={home.link}>{item.name}</a>
+          </Link>
+          </li>
+      
+        ))}
+      </div>
     </>
   )
 }

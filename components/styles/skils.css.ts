@@ -2,8 +2,6 @@ import { style } from "@vanilla-extract/css";
 const skils={
   content:style({
     margin:"50px auto auto auto",
-    border:"2px solid gray",
-    height:"550px",
     textAlign:"center",
     
     '@media':{
@@ -19,7 +17,7 @@ const skils={
     //textAlign:"center"
   }),
   box:style({
-    height:"400px",
+    border:"2px solid gray",
     //textAlign:"center",
     boxSizing:"border-box",
     overflow:"auto"
@@ -38,14 +36,9 @@ const skils={
     }
   }),
   modal:style({
-    margin:"auto",
+    margin:"50px auto",
+    marginBottom:"0",
     textAlign:"center",
-    '@media':{
-      'screen and (max-height:1000px)':{
-        height:"500px",
-        overflow:"auto",
-      }
-    }
   }),
   tskil:style({
     height:"60px",
@@ -57,13 +50,6 @@ const skils={
   }),
   table:style({
     borderCollapse:"collapse",
-  }),
-  btn:style({
-    marginTop:"10px",
-   backgroundColor:"yellow",
-   color:"red",
-   borderRadius:"30%",
-   cursor:"pointer",
   }),
   btn1:style({
     marginTop:"10px",
@@ -84,5 +70,16 @@ const skils={
     fontWeight:"bold",
     border:"1px solid white"
   }),
+  link:style({
+    backgroundColor:"yellow",
+    color:"red",
+    ':hover':{
+      backgroundColor:"black",
+      transition:"0.4s",
+    }
+  }),
+  li:style({
+    margin:"10px auto",
+  })
 }
 export default skils;

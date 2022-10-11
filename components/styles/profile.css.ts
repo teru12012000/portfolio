@@ -1,38 +1,17 @@
 import { style } from "@vanilla-extract/css";
 const intro={
   content:style({
-    margin:"50px auto auto auto",
-    height:"420px",
-    display:"inline-block",
-    border:"2px solid gray",
-    
-    '@media':{
-      'screen and (min-width:281px)':{
-        display:"flex",
-        justifyContent:"center",
-      },
-      'screen and (max-width:280px)':{
-        height:"820px"
-      },
-      'screen and (min-width:1000px)':{
-        width:"1000px",
-      }
-    }
+    margin:"30px auto",
+    width:"100%",
   }),
   photo:style({
-    margin:"0",
-    height:"400px",
-    width:"200px",
+    margin:"auto",
+    height:"300px",
+    width:"150px",
     position:"relative",
     '@media':{
-    'screen and (max-width:414px)':{
-      width:"45%",
-      height:"400px",
-    },
     'screen and (max-width:280px)':{
       width:"100%",
-      height:"200px",
-      margin:"auto"
     }
    }
   }),
@@ -41,18 +20,13 @@ const intro={
   }),
   passage:style({
     textAlign:"center",
-    overflow:"auto",
-    height:"430px",
-    width:"400px",
+    width:"100%",
     whiteSpace: "nowrap",
     boxSizing:"border-box",
+    fontSize:"15px",
     '@media':{
-      'screen and (max-width:540px)':{
-        height:"600px",
-      },
       'screen and (max-width:414px)':{
-        width:"276px",
-        height:"400px",
+        fontSize:"15px",
       },
     }
   }),
@@ -66,6 +40,21 @@ const intro={
   }),
   ul:style({
     padding:"0"
+  }),
+  link:style({  
+    backgroundColor:"yellow",
+    color:"red",
+    fontSize:"20px",
+    ':hover':{
+      backgroundColor:"black",
+      transition:"0.4s",
+    }
+  }),
+  content1:style({
+    width:"100%",
+    textAlign:"center",
+    margin:"10px auto",
+   
   })
 }
 

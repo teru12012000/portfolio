@@ -51,7 +51,6 @@ const Profile: NextPage = () => {
     },
   ]
   return (
-    <>
      <div className={intro.content} id="intro">
       <figure className={intro.photo}>
         <Image
@@ -71,8 +70,12 @@ const Profile: NextPage = () => {
         </ul>
         
       </div>
+      <div className={intro.content1}>
+        <Link href="/">
+              <a className={intro.link}>TOPに戻る</a>
+        </Link>
+      </div>
      </div>
-    </>
   )
 }
 

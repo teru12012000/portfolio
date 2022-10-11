@@ -124,14 +124,24 @@ const Skils: NextPage = () => {
     setModalIsOpen(true);
   }
   return (
-    <>
+    
       <div className={skils.content} id="intro">
-      <Modal
-         isOpen={modalIsOpen}
-         onRequestClose={closeModal}
-         style={customStyles}
-      >
-      <div className={skils.modal}>
+      
+     
+        <h2 className={skils.h2}>スキル</h2>
+        <div className={skils.box}>
+          {langage.map((item,index)=>(
+            <figure className={skils.img} key={index}>
+            <Image
+              src={item.link}
+              layout='fill' 
+              alt='logo'
+            />
+          </figure>
+          ))}
+        </div>
+        <div className={skils.modal}>
+          <h2>詳細</h2>
           <table border={1} className={skils.table}>
             <thead>
               <tr className={skils.head}>
@@ -156,34 +166,13 @@ const Skils: NextPage = () => {
               </tbody>
             ))}
           </table>
-          <button 
-            onClick={closeModal}
-            className={skils.btn1}
-          >
-            close
-          </button>
         </div>
-      </Modal>
-        <h2 className={skils.h2}>スキル</h2>
-        <div className={skils.box}>
-          {langage.map((item,index)=>(
-            <figure className={skils.img} key={index}>
-            <Image
-              src={item.link}
-              layout='fill' 
-              alt='logo'
-            />
-          </figure>
-          ))}
-        </div>
-        <button 
-          className={skils.btn}
-          onClick={()=>handlebtn()}
-        >
-          詳細を見る
-        </button>
+        <div className={skils.li}>
+            <Link href="/">
+              <a className={skils.link}>TOPに戻る</a>
+            </Link>
+          </div>
      </div>
-    </>
   )
 }
 
