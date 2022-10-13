@@ -49,11 +49,6 @@ const home={
   icon:style({
     width:"70px",
     height:"70px",
-    ':hover':{
-      width:"100px",
-      height:"100px",
-      transition:"0.4s"
-    }
   }),
   pass:style({
     margin:"0",
