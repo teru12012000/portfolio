@@ -47,9 +47,11 @@ const home={
 
   }),
   icon:style({
-    width:"70px",
-    height:"70px",
-    backgroundColor:"red",
+    fontSize:"70px",
+    ':hover':{
+      fontSize:"100px",
+      transition:"0.4s"
+    }
   }),
   pass:style({
     margin:"0",

@@ -47,16 +47,16 @@ const intro={
     margin:"10px auto",
   }),
   icon:style({
-    width:"50px",
-    height:"50px",
+    fontSize:"70px",
     ':hover':{
-      width:"60px",
-      height:"60px",
-      transition:"0.4s",
+        fontSize:"100px",
+        transition:"0.4s"
+      }
     }
-  }),
+  ),
   p:style({
-    margin:"0"
+    margin:"0",
+    fontSize:"20px",
   })
 }
 
