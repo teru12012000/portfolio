@@ -52,6 +52,7 @@ const home={
   }),
   pass:style({
     margin:"0",
+    fontSize:"20px"
   })
 };
 
