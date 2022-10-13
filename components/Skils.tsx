@@ -5,7 +5,7 @@ import skils  from './styles/skils.css';
 import Link from 'next/link';
 import Head from 'next/head';
 import Modal from 'react-modal';
-import { handleWebpackExtenalForEdgeRuntime } from 'next/dist/build/webpack/plugins/middleware-plugin';
+import OtherHousesRoundedIcon from '@mui/icons-material/OtherHousesRounded';
 import { useState } from 'react';
 type icons={
   link:string;
@@ -167,11 +167,14 @@ const Skils: NextPage = () => {
             ))}
           </table>
         </div>
-        <div className={skils.li}>
-            <Link href="/">
-              <a className={skils.link}>TOPに戻る</a>
-            </Link>
-          </div>
+        <div className={intro.content1}>
+          <Link href="/">
+                <a>
+                  <OtherHousesRoundedIcon className={intro.icon}/>
+                  <p className={intro.p}>TOP</p>
+                </a>
+          </Link>
+        </div>
      </div>
   )
 }

@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import intro from './styles/profile.css';
 import Link from 'next/link';
+import OtherHousesRoundedIcon from '@mui/icons-material/OtherHousesRounded';
 type my_profile={
   question:string;
   answer:string;
@@ -72,7 +73,10 @@ const Profile: NextPage = () => {
       </div>
       <div className={intro.content1}>
         <Link href="/">
-              <a className={intro.link}>TOPに戻る</a>
+              <a>
+                <OtherHousesRoundedIcon className={intro.icon}/>
+                <p className={intro.p}>TOP</p>
+              </a>
         </Link>
       </div>
      </div>

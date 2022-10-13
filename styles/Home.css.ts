@@ -11,20 +11,6 @@ const home={
     width:"100%",
     textAlign:"center",
   }),
-  link:style({
-    backgroundColor:"yellow",
-    color:"red",
-    fontSize:"20px",
-    ':hover':{
-      backgroundColor:"black",
-      transition:"0.4s"
-    },
-    '@media':{
-      'screen and (min-width:900px)':{
-        fontSize:"25px",
-      }
-    },
-  }),
   img:style({
     margin:"auto",
     
@@ -37,7 +23,7 @@ const home={
   }),
   li:style({
     listStyle:"none",
-    margin:"10px",
+    marginTop:"30px",
     '@media':{
       'screen and (min-width:900px)':{
         margin:"20px",
@@ -59,6 +45,18 @@ const home={
       },
     }
 
+  }),
+  icon:style({
+    width:"80px",
+    height:"80px",
+    ':hover':{
+      width:"100px",
+      height:"100px",
+      transition:"0.4s"
+    }
+  }),
+  pass:style({
+    margin:"0",
   })
 };
 

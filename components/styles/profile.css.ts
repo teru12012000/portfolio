@@ -41,20 +41,22 @@ const intro={
   ul:style({
     padding:"0"
   }),
-  link:style({  
-    backgroundColor:"yellow",
-    color:"red",
-    fontSize:"20px",
-    ':hover':{
-      backgroundColor:"black",
-      transition:"0.4s",
-    }
-  }),
   content1:style({
     width:"100%",
     textAlign:"center",
     margin:"10px auto",
-   
+  }),
+  icon:style({
+    width:"50px",
+    height:"50px",
+    ':hover':{
+      width:"60px",
+      height:"60px",
+      transition:"0.4s",
+    }
+  }),
+  p:style({
+    margin:"0"
   })
 }
 

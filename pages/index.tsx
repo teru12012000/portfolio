@@ -5,21 +5,11 @@ import Header from '../components/Header'
 import Skils from '../components/Skils'
 import home from '../styles/Home.css'
 import Link from 'next/link';
-type menu={
-  link:string,
-  name:string;
-}
+import ContactPageRoundedIcon from '@mui/icons-material/ContactPageRounded';
+import LaptopChromebookRoundedIcon from '@mui/icons-material/LaptopChromebookRounded';
+
 const Home: NextPage = () => {
-  const list:menu[]=[
-    {
-      link:'./myintro',
-      name:'自己紹介'
-    },
-    {
-      link:'./myskil',
-      name:'スキル'
-    }
-  ]
+  
   return (
     <>
       <Head>
@@ -48,14 +38,22 @@ const Home: NextPage = () => {
       </div>
       <div className={home.content}>
         <h1 >menu</h1>
-        {list.map((item,index)=>(
-          <li key={index} className={home.li}>
-            <Link href={item.link}>
-            <a className={home.link}>{item.name}</a>
+        <li className={home.li}>
+            <Link href='/myintro'>
+            <a>
+              <ContactPageRoundedIcon className={home.icon} />
+              <p className={home.pass}>Profile</p>
+            </a>
           </Link>
-          </li>
-      
-        ))}
+        </li>
+        <li className={home.li}>
+            <Link href='/myskil'>
+            <a>
+              <LaptopChromebookRoundedIcon className={home.icon}/>
+              <p className={home.pass}>Skils</p>
+            </a>
+          </Link>
+        </li>
       </div>
     </>
   )
