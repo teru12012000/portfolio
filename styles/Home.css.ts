@@ -49,6 +49,7 @@ const home={
   icon:style({
     width:"70px",
     height:"70px",
+    backgroundColor:"red",
   }),
   pass:style({
     margin:"0",
