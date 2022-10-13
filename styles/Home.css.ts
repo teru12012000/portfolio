@@ -47,8 +47,8 @@ const home={
 
   }),
   icon:style({
-    width:"80px",
-    height:"80px",
+    width:"70px",
+    height:"70px",
     ':hover':{
       width:"100px",
       height:"100px",
