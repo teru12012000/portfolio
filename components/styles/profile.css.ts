@@ -47,9 +47,8 @@ const intro={
     margin:"10px auto",
   }),
   icon:style({
-    fontSize:"70px",
     ':hover':{
-        fontSize:"100px",
+        fontSize:"50px",
         transition:"0.4s"
       }
     }
