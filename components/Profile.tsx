@@ -53,14 +53,15 @@ const Profile: NextPage = () => {
   ]
   return (
      <div className={intro.content} id="intro">
-      <figure className={intro.photo}>
-        <Image
-          src='/img/img2.png'
-          layout='fill' 
-          alt='logo'
-        />
-      </figure>
       <div className={intro.passage}>
+      <div className={intro.content1}>
+        <Link href="/">
+              <a>
+                <OtherHousesRoundedIcon className={intro.icon}/>
+                <p className={intro.p}>TOP</p>
+              </a>
+        </Link>
+      </div>
         <h2 className={intro.h2}>自己紹介</h2>
         <ul className={intro.ul}>
           {my_intro.map((item,index)=>(
@@ -70,14 +71,6 @@ const Profile: NextPage = () => {
           ))}
         </ul>
         
-      </div>
-      <div className={intro.content1}>
-        <Link href="/">
-              <a>
-                <OtherHousesRoundedIcon className={intro.icon}/>
-                <p className={intro.p}>TOP</p>
-              </a>
-        </Link>
       </div>
      </div>
   )

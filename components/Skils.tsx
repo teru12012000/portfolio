@@ -112,10 +112,15 @@ const Skils: NextPage = () => {
     setModalIsOpen(true);
   }
   return (
-    
       <div className={skils.content} id="intro">
-      
-     
+        <div className={intro.content1}>
+          <Link href="/">
+                <a>
+                  <OtherHousesRoundedIcon className={intro.icon}/>
+                  <p className={intro.p}>TOP</p>
+                </a>
+          </Link>
+        </div>
         <h2 className={skils.h2}>スキル</h2>
         <div className={skils.box}>
           {langage.map((item,index)=>(
@@ -154,14 +159,6 @@ const Skils: NextPage = () => {
               </tbody>
             ))}
           </table>
-        </div>
-        <div className={intro.content1}>
-          <Link href="/">
-                <a>
-                  <OtherHousesRoundedIcon className={intro.icon}/>
-                  <p className={intro.p}>TOP</p>
-                </a>
-          </Link>
         </div>
      </div>
   )

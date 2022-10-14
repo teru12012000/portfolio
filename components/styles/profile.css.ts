@@ -17,6 +17,8 @@ const intro={
   }),
   h2:style({
     textAlign:"center",
+    fontSize:"60px",
+    margin:"50px"
   }),
   passage:style({
     textAlign:"center",
@@ -33,6 +35,7 @@ const intro={
   list:style({
     margin:"10px",
     color:"blue",
+    fontSize:"25px",
     listStyle:"none",
   }),
   span:style({
@@ -42,20 +45,21 @@ const intro={
     padding:"0"
   }),
   content1:style({
-    width:"100%",
+    width:"50px",
     textAlign:"center",
-    margin:"10px auto",
+    marginLeft:"100px",
+
   }),
   icon:style({
     ':hover':{
-        fontSize:"50px",
-        transition:"0.4s"
-      }
+      fontSize:"50px",
+      transition:"0.4s"
     }
-  ),
+  }),
   p:style({
     margin:"0",
     fontSize:"20px",
+    textAlign:"center",
   })
 }
 
