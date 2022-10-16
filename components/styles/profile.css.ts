@@ -47,7 +47,7 @@ const intro={
   content1:style({
     width:"50px",
     textAlign:"center",
-    marginLeft:"100px",
+    marginLeft:"30px",
 
   }),
   icon:style({

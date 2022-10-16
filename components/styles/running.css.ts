@@ -17,7 +17,6 @@ const run={
   }),
   content:style({
     margin:"30px auto",
-    width:"500px",
   }),
   pass:style({
     fontSize:"18px",
