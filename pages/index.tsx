@@ -32,8 +32,14 @@ const Home: NextPage = () => {
           現在大学4年生です。このサイトは
           私の自己紹介サイトになります。
           TwitterやGithubを参照したい方は
-          ヘッダーのアイコンをクリックしてください。
-
+          ヘッダーのアイコンをクリックしてください。<br/>
+          Twitterのアカウントは技術用になっています。<br/>
+          別のアカウントは
+          <Link href='https://twitter.com/s1i2o0n1'>
+            <a className={home.a}>(https://twitter.com/s1i2o0n1)</a>
+          </Link>
+          <br/>
+          からアクセスしてください。
         </p>
       </div>
       <div className={home.content}>

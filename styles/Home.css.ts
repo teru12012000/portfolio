@@ -77,6 +77,13 @@ const home={
    backgroundColor:"yellow",
    color:"red",
    marginLeft:"8px",
+  }),
+  a:style({
+    color:"red",
+    ':hover':{
+      color:"aqua",
+      transition:"0.4s"
+    }
   })
 };
 
