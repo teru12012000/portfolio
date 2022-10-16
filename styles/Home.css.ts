@@ -64,17 +64,19 @@ const home={
     marginBottom:"20px",
   }),
   title:style({
-   marginTop:"-17px",
+   marginTop:"-19px",
    width:"180px",
    marginLeft:"8px",
-   backgroundColor:"white"
+   backgroundColor:"yellow",
+   color:"red"
    
   }),
   title2:style({
-    marginTop:"-17px",
+   marginTop:"-19px",
    width:"100px",
-   marginLeft:"15px",
-   backgroundColor:"white"
+   backgroundColor:"yellow",
+   color:"red",
+   marginLeft:"8px",
   })
 };
 
