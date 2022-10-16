@@ -79,9 +79,9 @@ const home={
    marginLeft:"8px",
   }),
   a:style({
-    color:"red",
+    color:"blue",
     ':hover':{
-      color:"aqua",
+      backgroundColor:"aqua",
       transition:"0.4s"
     }
   })
