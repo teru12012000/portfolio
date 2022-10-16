@@ -15,8 +15,8 @@ const home={
     margin:"auto",
     
     position:"relative",
-    width:"100px",
-    height:"100px",
+    width:"200px",
+    height:"200px",
   }),
   img2:style({
     borderRadius:"50%",
@@ -55,6 +55,26 @@ const home={
   pass:style({
     margin:"0",
     fontSize:"20px"
+  }),
+  box:style({
+    border:"2px solid gray",
+    width:"300px",
+    margin:"auto",
+    borderRadius:"10%",
+    marginBottom:"20px",
+  }),
+  title:style({
+   marginTop:"-17px",
+   width:"180px",
+   marginLeft:"8px",
+   backgroundColor:"white"
+   
+  }),
+  title2:style({
+    marginTop:"-17px",
+   width:"100px",
+   marginLeft:"15px",
+   backgroundColor:"white"
   })
 };
 

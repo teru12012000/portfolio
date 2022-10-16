@@ -3,6 +3,7 @@ import Image from 'next/image';
 import intro from './styles/profile.css';
 import Link from 'next/link';
 import OtherHousesRoundedIcon from '@mui/icons-material/OtherHousesRounded';
+import Back from './Back';
 type my_profile={
   question:string;
   answer:string;
@@ -54,14 +55,7 @@ const Profile: NextPage = () => {
   return (
      <div className={intro.content} id="intro">
       <div className={intro.passage}>
-      <div className={intro.content1}>
-        <Link href="/">
-              <a>
-                <OtherHousesRoundedIcon className={intro.icon}/>
-                <p className={intro.p}>TOP</p>
-              </a>
-        </Link>
-      </div>
+      <Back/>
         <h2 className={intro.h2}>自己紹介</h2>
         <ul className={intro.ul}>
           {my_intro.map((item,index)=>(
