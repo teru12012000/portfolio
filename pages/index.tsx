@@ -36,7 +36,7 @@ const Home: NextPage = () => {
           Twitterのアカウントは技術用になっています。<br/>
           別のアカウントは
           <Link href='https://twitter.com/s1i2o0n1'>
-            <a className={home.a}>(https://twitter.com/s1i2o0n1)</a>
+            <a target="_blank" rel="noopener noreferrer" className={home.a}>(https://twitter.com/s1i2o0n1)</a>
           </Link>
           <br/>
           からアクセスしてください。

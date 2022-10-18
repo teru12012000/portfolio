@@ -12,12 +12,12 @@ const Header: NextPage = () => {
         <ul className={head.ul}>
           <li className={head.list}>
             <Link href="https://github.com/teru12012000">
-              <a className={head.link}><GitHubIcon className={head.icon}/></a>
+              <a target="_blank" rel="noopener noreferrer" className={head.link}><GitHubIcon className={head.icon}/></a>
             </Link>
           </li>
           <li className={head.list}>
             <Link href="https://twitter.com/TERUSI1201">
-              <a className={head.link}><TwitterIcon className={head.icon}/></a>
+              <a target="_blank" rel="noopener noreferrer" className={head.link}><TwitterIcon className={head.icon}/></a>
             </Link>
           </li>
         </ul>
