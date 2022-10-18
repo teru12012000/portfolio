@@ -22,7 +22,7 @@ const run={
     fontSize:"18px",
   }),
   span:style({
-    color:"red"
+    color:"blue"
   })
 };
 
