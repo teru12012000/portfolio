@@ -121,7 +121,7 @@ const Skils: NextPage = () => {
                 </a>
           </Link>
         </div>
-        <h2 className={skils.h2}>スキル</h2>
+        <h2>スキル</h2>
         <div className={skils.box}>
           {langage.map((item,index)=>(
             <figure className={skils.img} key={index}>

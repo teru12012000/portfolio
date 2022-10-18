@@ -18,37 +18,22 @@ const intro={
   h2:style({
     textAlign:"center",
     fontSize:"60px",
-    margin:"50px"
-  }),
-  passage:style({
-    textAlign:"center",
-    width:"100%",
-    whiteSpace: "nowrap",
-    boxSizing:"border-box",
-    fontSize:"15px",
+    margin:"50px",
     '@media':{
-      'screen and (max-width:414px)':{
-        fontSize:"15px",
+      'screen and (max-width:700px)':{
+        fontSize:"30px"
       },
     }
   }),
-  list:style({
-    margin:"10px",
-    color:"blue",
-    fontSize:"25px",
-    listStyle:"none",
-  }),
-  span:style({
-    color:"red",
-  }),
-  ul:style({
-    padding:"0"
-  }),
-  content1:style({
-    width:"50px",
-    textAlign:"center",
-    marginLeft:"30px",
-
+  passage:style({
+    width:"700px",
+    fontSize:"15px",
+    margin:"auto",
+    '@media':{
+      'screen and (max-width:700px)':{
+        width:"100%"
+      },
+    }
   }),
   icon:style({
     ':hover':{
@@ -60,7 +45,31 @@ const intro={
     margin:"0",
     fontSize:"20px",
     textAlign:"center",
-  })
+  }),
+  box:style({
+    alignItems:"center",
+    width:"400px",
+    height:"250px",
+    border:"2px solid gray",
+    margin:"auto",
+    marginTop:"20px",
+    boxSizing:"border-box",
+    '@media':{
+      'screen and (max-width:400px)':{
+        width:"100%"
+      },
+    }
+  }),
+  content1:style({
+    width:"50px",
+    textAlign:"center",
+    marginLeft:"30px",
+
+  }),
+  pass:style({
+    height:"80px",
+    margin:"0",
+  }),
 }
 
 export default intro;

@@ -13,12 +13,8 @@ const skils={
       }
     }
   }),
-  h2:style({
-    //textAlign:"center"
-  }),
   box:style({
     border:"2px solid gray",
-    //textAlign:"center",
     boxSizing:"border-box",
     overflow:"auto"
   }),
