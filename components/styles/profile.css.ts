@@ -49,7 +49,6 @@ const intro={
   box:style({
     alignItems:"center",
     width:"400px",
-    height:"250px",
     border:"2px solid gray",
     margin:"auto",
     marginTop:"20px",
@@ -67,7 +66,6 @@ const intro={
 
   }),
   pass:style({
-    height:"80px",
     margin:"0",
   }),
 }
