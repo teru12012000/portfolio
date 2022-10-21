@@ -105,12 +105,6 @@ const Skils: NextPage = () => {
     },
     
   ]
-  const closeModal=()=>{
-    setModalIsOpen(false);
-  }
-  const handlebtn=()=>{
-    setModalIsOpen(true);
-  }
   return (
       <div className={skils.content} id="intro">
         <div className={intro.content1}>
