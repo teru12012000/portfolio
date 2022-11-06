@@ -13,13 +13,22 @@ const home={
   }),
   img:style({
     margin:"auto",
-    
     position:"relative",
-    width:"200px",
-    height:"200px",
+    width:"180px",
+    aspectRatio:"1/1",  
+  }),
+  imagebox:style({
+    width:"300px",
+    margin:"auto",
+    '@media':{
+      'screen and (max-width:300px)':{
+        width:"90%",
+      }
+    }
   }),
   img2:style({
     borderRadius:"50%",
+    
   }),
   li:style({
     listStyle:"none",
@@ -62,6 +71,11 @@ const home={
     margin:"auto",
     borderRadius:"10%",
     marginBottom:"20px",
+    '@media':{
+      'screen and (max-width:300px)':{
+        width:"90%",
+      }
+    }
   }),
   title:style({
    marginTop:"-19px",
@@ -84,6 +98,9 @@ const home={
       backgroundColor:"aqua",
       transition:"0.4s"
     }
+  }),
+  ol:style({
+    padding:"0",
   })
 };
 

@@ -46,36 +46,42 @@ const Home: NextPage = () => {
         <h1 >menu</h1>
         <div className={home.box}>
           <h2 className={home.title}>introduction</h2>
-          <li className={home.li}>
-            <Link href='/myintro'>
-              <a>
-                <ContactPageRoundedIcon className={home.icon} />
-                <p className={home.pass}>Profile</p>
-              </a>
-            </Link>
-          </li>
+          <ol className={home.ol}>
+            <li className={home.li}>
+              <Link href='/myintro'>
+                <a>
+                  <ContactPageRoundedIcon className={home.icon} />
+                  <p className={home.pass}>Profile</p>
+                </a>
+              </Link>
+            </li>
+          </ol>
         </div>
         <div className={home.box}>
           <h2 className={home.title}>technology</h2>
-          <li className={home.li}>
-            <Link href='/myskil'>
-            <a>
-              <LaptopChromebookRoundedIcon className={home.icon}/>
-              <p className={home.pass}>Skils</p>
-            </a>
-            </Link>
-          </li>
+          <ol className={home.ol}>
+            <li className={home.li}>
+              <Link href='/myskil'>
+              <a>
+                <LaptopChromebookRoundedIcon className={home.icon}/>
+                <p className={home.pass}>Skils</p>
+              </a>
+              </Link>
+            </li>
+          </ol>
         </div>
         <div className={home.box}>
           <h2 className={home.title2}>others</h2>
-          <li className={home.li}>
-            <Link href='/running'>
-              <a>
-                <DirectionsRunRoundedIcon className={home.icon}/>
-                <p className={home.pass}>running</p>
-              </a>
-            </Link>
-          </li>
+          <ol className={home.ol}>
+            <li className={home.li}>
+              <Link href='/running'>
+                <a>
+                  <DirectionsRunRoundedIcon className={home.icon}/>
+                  <p className={home.pass}>running</p>
+                </a>
+              </Link>
+            </li>
+          </ol>
         </div>
       </div>
     </>
