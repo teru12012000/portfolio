@@ -11,11 +11,12 @@ const head={
     color:'white',
     marginTop:"20px",
     paddingLeft:"20px",
+    fontSize:"30px",
     '@media':{
       'screen and (max-width:300px)':{
         textAlign:'center',
         fontSize:"20px",
-        margin:"20px 0 0 3px"
+        margin:"20px 0 0 0"
 
       },
     }
@@ -28,7 +29,7 @@ const head={
         margin:"15px 0 0 0"
       },
       'screen and (max-width:300px)':{
-        margin:"10px 0 0 0",
+        margin:"10px 0 0 10px",
 
       },
     }
@@ -55,6 +56,11 @@ const head={
     ':hover':{
       color:"aqua",
       transition:"0.4s"
+    },
+    '@media':{
+      'screen and (max-width:300px)':{
+       marginRight:"10px"
+      }
     }
   }),
   ul:style({

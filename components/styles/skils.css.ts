@@ -3,20 +3,18 @@ const skils={
   content:style({
     margin:"50px auto auto auto",
     textAlign:"center",
-    
-    '@media':{
-      'screen and (min-width:1000px)':{
-        width:"1000px",
-      },
-      'screen and (max-width:280px)':{
-        width:"100%",
-      }
-    }
+    width:"100%"
   }),
   box:style({
     border:"2px solid gray",
     boxSizing:"border-box",
-    overflow:"auto"
+    width:"400px",
+    margin:"30px auto",
+    '@media':{
+      'screen and (max-width:400px)':{
+        width:"90%",
+      },
+    }
   }),
   img:style({
     position:'relative',

@@ -59,7 +59,7 @@ const home={
     ':hover':{
       fontSize:"50px",
       transition:"0.4s"
-    }
+    },
   }),
   pass:style({
     margin:"0",

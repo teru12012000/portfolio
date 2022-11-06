@@ -7,153 +7,100 @@ import Head from 'next/head';
 import Modal from 'react-modal';
 import OtherHousesRoundedIcon from '@mui/icons-material/OtherHousesRounded';
 import { useState } from 'react';
-type icons={
-  link:string;
+import Back from './Back';
+type made={
+  name:string;
+  detail:string;
+  gitlink:string;
 }
 type lang={
   langage:string;
-  start:string;
   level:string;
+  link:string;
 }
 const Skils: NextPage = () => {
   const [modalIsOpen,setModalIsOpen]=useState(false);
   const Skil:lang[]=[
     {
       langage:"C",
-      start:"18歳",
-      level:"ライブラリは調べないと厳しいが基本的な文法は理解している。"
+      level:"プログラミング演習で使用した。文法は問題ない。ポインタとアドレスでつまるところはあったが多分問題ないと思う。最近は全く使うことがない。",
+      link:'/img/Clang.png',
     },
     {
       langage:"C++",
-      start:"19歳",
-      level:"ライブラリは調べないと厳しいが基本的な文法は理解している。"
+      level:"vectorとかあんまり使わないからよく分からないけどclassが使えるのはいいと思う！ライブラリとかまだよくわからないから使う時が来たら色々調べてみたい。",
+      link:'/img/Cplus.png',
     },
     {
       langage:"python",
-      start:"19歳",
-      level:"リストの操作やpandasなどの使い方が完璧でない。"
+      level:"最近研究で使わせてもらってる。gurobiとpythonで最適化問題を解く際に使える。pythonはデータ解析にも役立つ言語でコンパクトに短く書けるのはいい。だがライブラリが多すぎで覚えられないのと型がどうなのかなど定義をしないので良く怒られて悩まされる。",
+      link:'/img/python.png',
     },
     {
       langage:"Javascript",
-      start:"20歳",
-      level:"DOM取得や基本的な書き方については理解しているが、日付取得など調べないとできない部分もある。"
+      level:"DOM取得などその辺が悩まされたなって感じ。コードを書いているときにエラーが吐かれずあとあと、実行でバグを探すのが割とだるい。日付取得などまだ調べないとわからないものも多々ある。",
+      link:'/img/js.png',
     },
     {
       langage:"Typescript",
-      start:"21歳",
-      level:"Nextjs等で使用しているが、今のところ迷いなく使えている。今後詰まる可能性あり。"
-    },
-    {
-      langage:"php",
-      start:"20歳",
-      level:"実験で使用したことがあり文法は覚えているが配列操作などわからない部分がいまだに多い。最近は全く使っていない。"
-    },
-    {
-      langage:"html,css",
-      start:"18歳",
-      level:"htmlに関しては調べることはたまにあるがスムーズに書ける方だと思う。cssは調べることが多い。displayの部分などまだ理解できていない。"
-    },
-    {
-      langage:"Nodejs",
-      start:"21歳",
-      level:"動画を見ながらサーバーを構築してみたが理解できない部分がほとんど。"
-    },
-    {
-      langage:"React",
-      start:"21歳",
-      level:"最近主に使っている。勉強中なので理解できていないところが多い。このサイトはNextjsを使用している。"
-    },
-    {
-      langage:"Java",
-      start:"21歳",
-      level:"文法とclassを勉強中。今後GUIプログラミングについても勉強予定。"
-    }
-  ]
-  const langage:icons[]=[
-    {
-      link:'/img/Clang.png'
-    },
-    {
-      link:'/img/Cplas.png'
-    },
-    {
-      link:'/img/python.png'
-    },
-    {
-      link:'/img/js.png'
-    },
-    {
+      level:"型を覚えていないものが多いのでエラーと戦うことが多々。だけど、エラーを吐いてくれるから間違いに気付くことが増えて安心してコードを書けるので個人的には好き！JSをTSに書き換えるということについてはまだまだトレーニングが必要だ！",
       link:'/img/ts.png'
     },
     {
+      langage:"php",
+      level:"実験で使っただけでほとんど使用していない。配列の便利な機能等があった記憶があるがほぼ憶えていない。使うときが来たらちゃんと勉強しよｗ",
       link:'/img/php.png'
     },
     {
+      langage:"Java",
+      level:"ほんの少しだけ勉強した。classについての勉強を少ししたくらいで実際に内科作るといったことはしていない。Javaはよく企業で使われている言語なので勉強したいとは思っているが気が向いたときにでもやろうと思うｗ",
+      link:'/img/java.png',
+    },
+    {
+      langage:"html",
+      level:"タグを全部覚えているわけではないがそこまで調べなくなった。たまに調べることはあるが結構かけるようになったと思われる。",
       link:'/img/html.png'
     },
     {
+      langage:"css",
+      level:"ググるランキング第1位。めっちゃ苦手意識がある。調べることは悪くないがその時間が長いので困る。関係ないがデザインセンスが0なのでどうにかしたいｗ",
       link:'/img/css.png'
     },
     {
-      link:'/img/node.png'
+      langage:"Nodejs",
+      level:"動画を見ながら勉強したが応用しなかったので既にド忘れをした。この辺できるようになったらまた一つ世界が変わるのかもしれない。結構難しいと思った部分が多いのでじっくり時間があるときに勉強したい。",
+      link:'/img/node.png',
     },
     {
-      link:'/img/react.png'
+      langage:"React",
+      level:"ちょっと前まで使っていた。useStateといったReactHookについてはまだ勉強が必要かもしれない。実装も楽になったしとても感動した。",
+      link:'/img/react.png',
     },
     {
-      link:'/img/java.png'
+      langage:"Nextjs",
+      level:"このサイトも含めサイト作りは最近はこれを使っている。ページ推移が早いのと別のページが作るのが楽。最新のバージョンも更新されることが増えてきているので追いかけていきたいところ！",
+      link:'/img/nextjs.png',
     },
-    
+
   ]
   return (
       <div className={skils.content} id="intro">
-        <div className={intro.content1}>
-          <Link href="/">
-                <a>
-                  <OtherHousesRoundedIcon className={intro.icon}/>
-                  <p className={intro.p}>TOP</p>
-                </a>
-          </Link>
-        </div>
-        <h2>スキル</h2>
-        <div className={skils.box}>
-          {langage.map((item,index)=>(
-            <figure className={skils.img} key={index}>
-            <Image
-              src={item.link}
-              layout='fill' 
-              alt='logo'
-            />
-          </figure>
-          ))}
-        </div>
-        <div className={skils.modal}>
-          <h2>詳細</h2>
-          <table border={1} className={skils.table}>
-            <thead>
-              <tr className={skils.head}>
-                <td className={skils.tskil}>
-                  スキル
-                </td>
-                <td className={skils.tstart}>
-                  開始時
-                </td>
-                <td>
-                  詳細
-                </td>
-              </tr>
-            </thead>
-            {Skil.map((item,index)=>(
-              <tbody key={index}>
-                <tr key={index} className={skils.body}>
-                  <td className={skils.tskil}>{item.langage}</td>
-                  <td>{item.start}</td>
-                  <td>{item.level}</td>
-                </tr>
-              </tbody>
-            ))}
-          </table>
-        </div>
+        <Back/>
+        <h1>経験技術(ほんの少しでも触ったものも含む)</h1>
+        {Skil.map((item,index)=>(
+          <div key={index} className={skils.box}>
+            <figure className={skils.img}>
+              <Image
+                src={item.link}
+                layout='fill' 
+                alt='logo'
+                className={skils.img}
+              />
+            </figure>
+            <h2>{item.langage}</h2>
+            <p>{item.level}</p>
+          </div>
+        ))}
      </div>
   )
 }
