@@ -20,9 +20,19 @@ const run={
   }),
   pass:style({
     fontSize:"18px",
+    width:"400px",
+    margin:"auto",
+    '@media':{
+      'screen and (max-width:400px)':{
+        width:"90%",
+      }
+    }
   }),
   span:style({
     color:"blue"
+  }),
+  ol:style({
+    padding:"0",
   })
 };
 

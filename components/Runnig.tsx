@@ -40,18 +40,20 @@ const Running: NextPage = () => {
               className={run.img2}
             />
         </figure>
-        <h1>ランニング人生</h1>
+        <h1>ランニングについて</h1>
         <p>
           私は高校、大学の部活動で陸上競技の長距離種目
           をやってきました。
         </p>
         <div className={run.content}>
           <h2>自己ベスト</h2>
-          {mybest.map((item,index)=>(
-            <li key={index} className={run.li}>
-              {item.distance}:{item.time}
-            </li>
-          ))}
+          <ol className={run.ol}>
+            {mybest.map((item,index)=>(
+              <li key={index} className={run.li}>
+                {item.distance}:{item.time}
+              </li>
+            ))}
+          </ol>
         </div>
         <div className={run.content}>
           <h2>箱根駅伝予選会</h2>
