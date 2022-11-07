@@ -8,6 +8,7 @@ import Link from 'next/link';
 import ContactPageRoundedIcon from '@mui/icons-material/ContactPageRounded';
 import LaptopChromebookRoundedIcon from '@mui/icons-material/LaptopChromebookRounded';
 import DirectionsRunRoundedIcon from '@mui/icons-material/DirectionsRunRounded';
+import TwitterIcon from '@mui/icons-material/Twitter';
 const Home: NextPage = () => {
   
   return (
@@ -31,15 +32,6 @@ const Home: NextPage = () => {
           はじめまして。TERUSIです。
           現在大学4年生です。このサイトは
           私の自己紹介サイトになります。
-          TwitterやGithubを参照したい方は
-          ヘッダーのアイコンをクリックしてください。<br/>
-          Twitterのアカウントは技術用になっています。<br/>
-          別のアカウントは
-          <Link href='https://twitter.com/s1i2o0n1'>
-            <a target="_blank" rel="noopener noreferrer" className={home.a}>(https://twitter.com/s1i2o0n1)</a>
-          </Link>
-          <br/>
-          からアクセスしてください。
         </p>
       </div>
       <div className={home.content}>
@@ -51,7 +43,7 @@ const Home: NextPage = () => {
               <Link href='/myintro'>
                 <a>
                   <ContactPageRoundedIcon className={home.icon} />
-                  <p className={home.pass}>Profile</p>
+                  <p className={home.pass}>プロフィール</p>
                 </a>
               </Link>
             </li>
@@ -64,7 +56,7 @@ const Home: NextPage = () => {
               <Link href='/myskil'>
               <a>
                 <LaptopChromebookRoundedIcon className={home.icon}/>
-                <p className={home.pass}>Skils</p>
+                <p className={home.pass}>スキル</p>
               </a>
               </Link>
             </li>
@@ -77,11 +69,36 @@ const Home: NextPage = () => {
               <Link href='/running'>
                 <a>
                   <DirectionsRunRoundedIcon className={home.icon}/>
-                  <p className={home.pass}>running</p>
+                  <p className={home.pass}>ランニング</p>
                 </a>
               </Link>
             </li>
           </ol>
+        </div>
+        <div className={home.box}>
+          <h2 className={home.title2}>contact</h2>
+          <ol className={home.ol}>
+            <li className={home.li}>
+              <Link href='https://twitter.com/s1i2o0n1'>
+                <a>
+                  <TwitterIcon className={home.icon}/>
+                  <p className={home.pass}>ランニング、日常垢</p>
+                </a>
+              </Link>
+            </li>
+            <li className={home.li}>
+              <Link href='https://twitter.com/TERUSI1201'>
+                <a>
+                  <TwitterIcon className={home.icon}/>
+                  <p className={home.pass}>技術用垢</p>
+                </a>
+              </Link>
+            </li>
+          </ol>
+          <p>
+            上記ヘッダーのアカウントは技術用です。私は2つのアカウントを持っています。
+            連絡の際はどちらのアカウントでも構いません。
+          </p>
         </div>
       </div>
     </>
