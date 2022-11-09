@@ -7,6 +7,7 @@ import Link from 'next/link';
 import ContactPageRoundedIcon from '@mui/icons-material/ContactPageRounded';
 import LaptopChromebookRoundedIcon from '@mui/icons-material/LaptopChromebookRounded';
 import DirectionsRunRoundedIcon from '@mui/icons-material/DirectionsRunRounded';
+import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 import TwitterIcon from '@mui/icons-material/Twitter';
 const Home: NextPage = () => {
   
@@ -43,6 +44,14 @@ const Home: NextPage = () => {
               <a>
                 <ContactPageRoundedIcon className={home.icon}/>
                 <p className={home.pass}>プロフィール</p>
+              </a>
+              </Link>
+            </li>
+            <li className={home.li}>
+              <Link href='/univercity'>
+              <a>
+                <SchoolRoundedIcon className={home.icon}/>
+                <p className={home.pass}>大学</p>
               </a>
               </Link>
             </li>
