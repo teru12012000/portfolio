@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Header'
-import Skils from '../components/Skils'
 import home from '../styles/Home.css'
 import Link from 'next/link';
 import ContactPageRoundedIcon from '@mui/icons-material/ContactPageRounded';
