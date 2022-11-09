@@ -40,10 +40,10 @@ const Home: NextPage = () => {
           <ol className={home.ol}>
             <li className={home.li}>
               <Link href='/myintro'>
-                <a>
-                  <ContactPageRoundedIcon className={home.icon} />
-                  <p className={home.pass}>プロフィール</p>
-                </a>
+              <a>
+                <ContactPageRoundedIcon className={home.icon}/>
+                <p className={home.pass}>プロフィール</p>
+              </a>
               </Link>
             </li>
           </ol>
