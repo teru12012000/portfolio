@@ -1,34 +1,12 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import run from './styles/running.css';
+import run from '../styles/running.css';
 import home from '../styles/Home.css';
-import Link from 'next/link';
 import Back from './Back';
-import { randomUUID } from 'crypto';
-type best={
-  distance:string;
-  time:string;
-}
+import { mybest } from '../data/pbdata';
+
 
 const Running: NextPage = () => {
-  const mybest:best[]=[
-    {
-      distance:'1500m',
-      time:'4分17秒',
-    },
-    {
-      distance:'5000m',
-      time:'16分00秒',
-    },
-    {
-      distance:'10000m',
-      time:'33分30秒',
-    },
-    {
-      distance:'ハーフマラソン',
-      time:'77分13秒',
-    },
-  ]
   return(
     <div className={home.first}>
         <Back/>

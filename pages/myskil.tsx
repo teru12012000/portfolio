@@ -1,8 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
-import Skils from '../components/Skils'
-
+import skils from '../styles/skils.css'
+import { Skil } from '../data/skildata'
+import Image from 'next/image'
+import Back from '../components/Back'
 const skil: NextPage = () => {
   return (
     <div>
@@ -12,7 +14,25 @@ const skil: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <Skils/>
+      <Back/>
+      <div className={skils.content} id="intro">
+        
+        <h1>経験技術(ほんの少しでも触ったものも含む)</h1>
+        {Skil.map((item,index)=>(
+          <div key={index} className={skils.box}>
+            <figure className={skils.img}>
+              <Image
+                src={item.link}
+                layout='fill' 
+                alt='logo'
+                className={skils.img}
+              />
+            </figure>
+            <h2>{item.langage}</h2>
+            <p>{item.level}</p>
+          </div>
+        ))}
+     </div>
     </div>
   )
 }
