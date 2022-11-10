@@ -2,7 +2,6 @@ import { style } from "@vanilla-extract/css";
 const intro={
   content:style({
     margin:"30px auto",
-    width:"100%",
   }),
   photo:style({
     margin:"auto",
@@ -17,7 +16,7 @@ const intro={
   }),
   h2:style({
     textAlign:"center",
-    fontSize:"60px",
+    fontSize:"40px",
     margin:"50px",
     '@media':{
       'screen and (max-width:700px)':{
@@ -55,7 +54,7 @@ const intro={
     boxSizing:"border-box",
     '@media':{
       'screen and (max-width:400px)':{
-        width:"100%"
+        width:"90%"
       },
     }
   }),
