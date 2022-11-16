@@ -70,4 +70,4 @@ export const headerlinkName:Headlink[]=[
   }
 ]
 
-export const twitteraccountcoment:string='上記ヘッダーのアカウントは技術用です。私は2つのアカウントを持っています。連絡の際はどちらのアカウントでも構いません。';
+export const twitteraccountcoment:string='連絡の際はどちらのアカウントでも構いません。';
