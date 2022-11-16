@@ -18,6 +18,6 @@ export  const mybest:best[]=[
   },
   {
     distance:'ハーフマラソン',
-    time:'77分13秒',
+    time:'76分11秒',
   },
 ]

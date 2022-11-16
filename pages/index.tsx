@@ -3,13 +3,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Header'
 import home from '../styles/Home.css'
-import Link from 'next/link';
 import ContactPageRoundedIcon from '@mui/icons-material/ContactPageRounded';
 import LaptopChromebookRoundedIcon from '@mui/icons-material/LaptopChromebookRounded';
 import DirectionsRunRoundedIcon from '@mui/icons-material/DirectionsRunRounded';
 import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Menu from '../components/Menu'
+import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import { linkname, twitteraccountcoment, twitterName } from '../data/linkdata'
 const Home: NextPage = () => {
   
@@ -42,6 +42,7 @@ const Home: NextPage = () => {
           <ContactPageRoundedIcon className={home.icon}/>
           <SchoolRoundedIcon className={home.icon}/>
           <LaptopChromebookRoundedIcon className={home.icon}/>
+          <EditRoundedIcon className={home.icon}/>
           <DirectionsRunRoundedIcon className={home.icon}/>
         </Menu>
         <h1 >contact</h1>

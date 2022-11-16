@@ -17,7 +17,7 @@ const Menu:FC<Props> = ({name,detail,children}) => {
             {name.map((item,index)=>(
               <li key={index} className={home.li}>
                 <Link href={item.link}>
-                  <a>
+                  <a target={item.target}>
                     {children[index]}
                     <p className={home.pass}>{item.title}</p>
                   </a>
