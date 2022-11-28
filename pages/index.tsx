@@ -10,6 +10,7 @@ import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Menu from '../components/Menu'
 import EditRoundedIcon from '@mui/icons-material/EditRounded';
+import TerminalRoundedIcon from '@mui/icons-material/TerminalRounded';
 import { linkname, twitteraccountcoment, twitterName } from '../data/linkdata'
 const Home: NextPage = () => {
   
@@ -44,6 +45,7 @@ const Home: NextPage = () => {
           <LaptopChromebookRoundedIcon className={home.icon}/>
           <EditRoundedIcon className={home.icon}/>
           <DirectionsRunRoundedIcon className={home.icon}/>
+          <TerminalRoundedIcon className={home.icon}/>
         </Menu>
         <h1 >contact</h1>
         <Menu name={twitterName} detail={twitteraccountcoment}>
