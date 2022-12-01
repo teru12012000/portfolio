@@ -1,7 +1,7 @@
 import { style } from "@vanilla-extract/css";
 const intro={
   content:style({
-    margin:"30px auto",
+    margin:"250px auto",
   }),
   photo:style({
     margin:"auto",
@@ -25,12 +25,12 @@ const intro={
     }
   }),
   passage:style({
-    width:"700px",
+    width:"400px",
     fontSize:"15px",
     margin:"auto",
     '@media':{
-      'screen and (max-width:700px)':{
-        width:"100%"
+      'screen and (max-width:500px)':{
+        width:"60%"
       },
     }
   }),
@@ -61,7 +61,7 @@ const intro={
   content1:style({
     width:"50px",
     textAlign:"center",
-    marginLeft:"30px",
+    marginLeft:"0",
     marginTop:"10px",
 
   }),

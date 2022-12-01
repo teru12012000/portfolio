@@ -13,7 +13,7 @@ const profile: NextPage = () => {
         <meta name="description" content="プロフィールです" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header/>
+      <Header open={"flex"}/>
       <div className={intro.content} id="intro">
         <h2 className={intro.h2}>自己紹介</h2>
         <div className={intro.passage}>

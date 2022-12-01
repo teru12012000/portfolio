@@ -1,7 +1,7 @@
 import { style } from "@vanilla-extract/css";
 const skils={
   content:style({
-    margin:"200px auto auto auto",
+    margin:"250px auto auto auto",
     textAlign:"center",
     width:"100%"
   }),
@@ -11,8 +11,8 @@ const skils={
     width:"400px",
     margin:"30px auto",
     '@media':{
-      'screen and (max-width:400px)':{
-        width:"90%",
+      'screen and (max-width:500px)':{
+        width:"60%",
       },
     }
   }),

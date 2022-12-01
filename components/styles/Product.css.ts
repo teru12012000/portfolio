@@ -3,16 +3,18 @@ import { style } from "@vanilla-extract/css";
 const production={
   img:style({
     position:"relative",
+    zIndex:"-10",
     margin:"auto",
     textAlign:"center",
   }),
   content:style({
-    width:"400px",
+    width:"500px",
     margin:"50px auto",
+    overflowWrap:"break-word",
     textAlign:"center",
     '@media':{
-      'screen and (max-width:400px)':{
-        width:"100%",
+      'screen and (max-width:500px)':{
+        width:"70%",
       }
     }
   }),

@@ -8,7 +8,11 @@ import OtherHousesRoundedIcon from '@mui/icons-material/OtherHousesRounded';
 import Link from 'next/link';
 import intro from '../styles/profile.css';
 import Back from './Back';
-const Header: NextPage = () => {
+import {FC} from 'react';
+type Props={
+  open:string;
+}
+const Header: FC<Props> = ({open}) => {
   return (
     <div style={{position:"fixed",top:"0",width:"100%"}}>
       <header className={head.header}>
@@ -21,7 +25,7 @@ const Header: NextPage = () => {
           </HeaderLink>
         </div>
       </header>
-      <div>
+      <div style={{display:open,justifyContent:"space-between"}}>
         <Back/>
       </div>
     </div>

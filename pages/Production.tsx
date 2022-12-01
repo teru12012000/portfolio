@@ -15,7 +15,7 @@ const Production:NextPage = () => {
         <title>制作物</title>
         <meta name="description" content="私が作った制作物です。" />
       </Head>
-      <Header/>
+      <Header open={"flex"}/>
       <h1 className={production.h1}>制作物</h1>
       <Product title={'minesweeper(C言語)'} subtitle={['概要','プログラミングに慣れるきっかけになった','画像']} >
         <p>

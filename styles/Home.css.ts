@@ -4,7 +4,14 @@ import { style } from "@vanilla-extract/css";
 const home={
   first:style({
     margin:"200px auto",
+    width:"300px",
+    marginBottom:"30px",
     textAlign:'center',
+    '@media':{
+      'screen and (max-width:300px)':{
+        width:"70%",
+      }
+    }
   }),
   content:style({
     margin:"50px auto",

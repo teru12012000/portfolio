@@ -3,12 +3,12 @@ import { style } from "@vanilla-extract/css";
 
 const univerce={
   content:style({
-    width:"400px",
+    width:"500px",
     textAlign:"center",
-    margin:"200px auto",
+    margin:"250px auto",
     '@media':{
-      'screen and (max-width:400px)':{
-        width:"90%"
+      'screen and (max-width:500px)':{
+        width:"60%"
       }
     }
   }),
@@ -20,10 +20,15 @@ const univerce={
     textAlign:"left"
   }),
   sub:style({
-    width:"300px",
+    width:"400px",
     border:"2px solid gray",
     margin:"auto",
     marginBottom:"10px",
+    '@media':{
+      'screen and (max-width:500px)':{
+        width:"100%"
+      }
+    }
   }),
   li:style({
     listStyle:"none",

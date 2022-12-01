@@ -21,7 +21,7 @@ const run={
   }),
   pass:style({
     fontSize:"18px",
-    width:"400px",
+    width:"300px",
     margin:"auto",
     '@media':{
       'screen and (max-width:400px)':{
