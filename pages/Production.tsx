@@ -10,13 +10,12 @@ import Link from "next/link";
 
 const Production:NextPage = () => {
   return (
-    <div >
+    <div style={{margin:"200px auto"}}>
       <Head>
         <title>制作物</title>
         <meta name="description" content="私が作った制作物です。" />
       </Head>
       <Header/>
-      <Back/>
       <h1 className={production.h1}>制作物</h1>
       <Product title={'minesweeper(C言語)'} subtitle={['概要','プログラミングに慣れるきっかけになった','画像']} >
         <p>

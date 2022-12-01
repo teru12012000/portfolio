@@ -16,7 +16,6 @@ const Run: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <Back/>
       <div className={home.first}>
         
         <figure className={run.img}>

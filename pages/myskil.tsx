@@ -14,7 +14,6 @@ const skil: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <Back/>
       <div className={skils.content} id="intro">
         
         <h1>経験技術(ほんの少しでも触ったものも含む)</h1>

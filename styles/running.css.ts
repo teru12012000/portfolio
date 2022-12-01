@@ -5,6 +5,7 @@ const run={
   img:style({
     margin:"auto",
     position:"relative",
+    zIndex:"-10",
     width:"200px",
     height:"200px",
   }),

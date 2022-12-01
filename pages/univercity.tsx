@@ -16,7 +16,6 @@ const University: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <Back/>
       <div className={univerce.content}>
         <h1>大学で学ぶこと</h1>
         <p>

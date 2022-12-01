@@ -3,17 +3,20 @@ import { style } from "@vanilla-extract/css";
 
 const home={
   first:style({
-    margin:"50px auto",
+    margin:"200px auto",
     textAlign:'center',
   }),
   content:style({
-    margin:"20px auto",
+    margin:"50px auto",
     width:"100%",
+    zIndex:"-10",
+    //position:"sticky",
     textAlign:"center",
   }),
   img:style({
     margin:"auto",
     position:"relative",
+    zIndex:"-10000",
     width:"180px",
     aspectRatio:"1/1",  
   }),

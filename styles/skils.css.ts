@@ -1,7 +1,7 @@
 import { style } from "@vanilla-extract/css";
 const skils={
   content:style({
-    margin:"50px auto auto auto",
+    margin:"200px auto auto auto",
     textAlign:"center",
     width:"100%"
   }),
@@ -18,6 +18,7 @@ const skils={
   }),
   img:style({
     position:'relative',
+    zIndex:"-10",
     width:"100px",
     height:"100px",
     margin :"30px",

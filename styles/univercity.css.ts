@@ -5,7 +5,7 @@ const univerce={
   content:style({
     width:"400px",
     textAlign:"center",
-    margin:"20px auto",
+    margin:"200px auto",
     '@media':{
       'screen and (max-width:400px)':{
         width:"90%"
