@@ -3,8 +3,8 @@ import Head from "next/head";
 import Back from "../components/Back";
 import Header from "../components/Header";
 import Subject from "../components/Subject";
-import { one, three, two } from "../data/subjectdata";
-import { thought } from "../data/thought";
+import { one, three, two } from "./data/subjectdata";
+import { thought } from "./data/thought";
 import univerce from "../styles/univercity.css";
 
 const University: NextPage = () => {

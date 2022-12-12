@@ -4,7 +4,7 @@ import Back from "../components/Back";
 import Header from "../components/Header";
 import Product from "../components/product";
 import production from "../components/styles/Product.css";
-import { desktopapp, jobhunting, minesweeper, numeron, numeronweb, weblink } from "../data/product";
+import { desktopapp, jobhunting, minesweeper, numeron, numeronweb, weblink } from "./data/product";
 import Photolink from "../components/Photolink";
 import Link from "next/link";
 
@@ -120,8 +120,8 @@ const Production:NextPage = () => {
         <h1 className={production.h1}>web制作物のリンク</h1>
         {weblink.map((item,index)=>(
           <div key={index} className={production.link}>
-            <Link href={item.name}>
-              <a target="_blank" className={production.a}>{item.title}</a>
+            <Link href={item.name} target="_blank" className={production.a}>
+              {item.title}
             </Link>
             <p>上記リンクをクリック！</p>
           </div>

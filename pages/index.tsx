@@ -11,7 +11,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import Menu from '../components/Menu'
 import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import TerminalRoundedIcon from '@mui/icons-material/TerminalRounded';
-import { linkname, twitteraccountcoment, twitterName } from '../data/linkdata'
+import { linkname, twitteraccountcoment, twitterName } from './data/linkdata'
 const Home: NextPage = () => {
   
   return (

@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Back from '../components/Back'
 import Header from '../components/Header'
 import intro from '../styles/profile.css'
-import { my_intro } from '../data/profiledata'
+import { my_intro } from './data/profiledata'
 
 const profile: NextPage = () => {
   return (

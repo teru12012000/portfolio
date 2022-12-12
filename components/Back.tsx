@@ -7,12 +7,10 @@ import OtherHousesRoundedIcon from '@mui/icons-material/OtherHousesRounded';
 const Back: NextPage = () => {
   return (
     <>
-       <div className={intro.content1}>
+      <div className={intro.content1}>
         <Link href="/">
-              <a>
-                <OtherHousesRoundedIcon className={intro.icon}/>
-                <p className={intro.p}>TOP</p>
-              </a>
+          <OtherHousesRoundedIcon className={intro.icon}/>
+          <p className={intro.p}>TOP</p>
         </Link>
       </div>
       

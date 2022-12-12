@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 import production from "./styles/Product.css";
-import { productionlink } from "../data/product";
+import { productionlink } from "../pages/data/product";
 type Props={
   photo:productionlink[];
 }
@@ -13,8 +13,7 @@ const Photolink:FC<Props> = ({photo}) => {
     <>
       {photo.map((item,index)=>(
           <div key={index}>
-          <Link  href={item.link}>
-            <a target="_blank">
+          <Link  href={item.link} target="_blank">
               <figure 
                 className={production.img}
                 style={{
@@ -28,7 +27,6 @@ const Photolink:FC<Props> = ({photo}) => {
                 alt='logo'
               />
               </figure>
-            </a>
           </Link>
           <p>{item.title}</p>
           </div>
