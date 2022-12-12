@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import home from '../styles/Home.css'
 import run from '../styles/running.css';
 import Back from '../components/Back'
-import { mybest } from './data/pbdata'
+import { mybest } from '../data/pbdata'
 
 const Run: NextPage = () => {
   return (

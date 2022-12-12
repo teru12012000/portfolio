@@ -4,7 +4,7 @@ import Back from "../components/Back";
 import Header from "../components/Header";
 import Product from "../components/product";
 import production from "../components/styles/Product.css";
-import { desktopapp, jobhunting, minesweeper, numeron, numeronweb, weblink } from "./data/product";
+import { desktopapp, jobhunting, minesweeper, numeron, numeronweb, weblink } from "../data/product";
 import Photolink from "../components/Photolink";
 import Link from "next/link";
 

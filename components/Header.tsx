@@ -3,7 +3,7 @@ import head from './styles/header.css';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import HeaderLink from './HeaderLink';
-import { headerlinkName } from '../pages/data/linkdata';
+import { headerlinkName } from '../data/linkdata';
 import OtherHousesRoundedIcon from '@mui/icons-material/OtherHousesRounded';
 import Link from 'next/link';
 import intro from '../styles/profile.css';

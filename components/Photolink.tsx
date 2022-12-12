@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 import production from "./styles/Product.css";
-import { productionlink } from "../pages/data/product";
+import { productionlink } from "../data/product";
 type Props={
   photo:productionlink[];
 }

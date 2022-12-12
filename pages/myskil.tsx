@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
 import skils from '../styles/skils.css'
-import { Skil } from './data/skildata'
+import { Skil } from '../data/skildata'
 import Image from 'next/image'
 import Back from '../components/Back'
 const skil: NextPage = () => {

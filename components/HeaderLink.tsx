@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FC, ReactNode } from "react";
-import { Headlink } from "../pages/data/linkdata";
+import { Headlink } from "../data/linkdata";
 import head from "./styles/header.css";
 
 type Props={
