@@ -10,7 +10,7 @@ export  const mybest:best[]=[
   },
   {
     distance:'5000m',
-    time:'16分00秒',
+    time:'15分44秒',
   },
   {
     distance:'10000m',
