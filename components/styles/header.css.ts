@@ -14,6 +14,27 @@ const head={
     }
     
   }),
+  hamlist:style({
+    zIndex:"500px",
+    paddingTop:"20px",
+    '@media':{
+      'screen and (max-width:500px)':{
+        width:"100%",
+      }
+    },
+  }),
+  hamul:style({
+    overflow:"auto",
+    zIndex:"200px",
+    height:"450px",
+    backgroundColor:"white",
+    '::-webkit-scrollbar':{
+      display:"none",
+    }
+  }),
+
+
+
   list:style({
     display:"inline-block",
     textAlign:"center",
