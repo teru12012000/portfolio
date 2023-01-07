@@ -16,14 +16,15 @@ const skil: NextPage = () => {
       <Header open={"flex"}/>
       <div className={skils.content} id="intro">
         
-        <h1>経験技術(ほんの少しでも触ったものも含む)</h1>
+        <h1>言語とツール(ほんの少しでも触ったものも含む)</h1>
         {Skil.map((item,index)=>(
           <div key={index} className={skils.box}>
-            <figure className={skils.img}>
+            <figure>
               <Image
                 src={item.link}
-                layout='fill' 
                 alt='logo'
+                width={50}
+                height={50}
                 className={skils.img}
               />
             </figure>

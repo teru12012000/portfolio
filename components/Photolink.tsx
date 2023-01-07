@@ -16,14 +16,11 @@ const Photolink:FC<Props> = ({photo}) => {
           <Link  href={item.link} target="_blank">
               <figure 
                 className={production.img}
-                style={{
-                  width:item.width,
-                  height:item.height,
-                }}
               >
               <Image
                 src={item.link}
-                layout='fill' 
+                height={100}
+                width={200}
                 alt='logo'
               />
               </figure>

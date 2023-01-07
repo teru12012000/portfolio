@@ -26,7 +26,8 @@ const Home: NextPage = () => {
         <figure className={home.img}>
           <Image
               src='/img/me.jpg'
-              layout='fill' 
+              height={150}
+              width={150}
               alt='logo'
               className={home.img2}
           />

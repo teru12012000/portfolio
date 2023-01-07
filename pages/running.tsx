@@ -21,7 +21,8 @@ const Run: NextPage = () => {
         <figure className={run.img}>
             <Image
               src='/img/running.jpg'
-              layout='fill' 
+              height={150}
+              width={150}
               alt='logo'
               className={run.img2}
             />

@@ -21,7 +21,7 @@ const skils={
     zIndex:"-10",
     width:"100px",
     height:"100px",
-    margin :"30px",
+    textAlign:"center",
     display:"inline-block",
     
     '@media':{
