@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FC, ReactNode, useState } from "react";
@@ -8,13 +9,9 @@ type Props={
   children:ReactNode[];
 }
 const Product:FC<Props>= ({title,subtitle,children}) => {
-  const [display,setDisplay]=useState("none");
+  const [display,setDisplay]=useState<boolean>(false);
   const handleClick=()=>{
-    if(display==='none'){
-      setDisplay('block');
-    }else{
-      setDisplay('none');
-    }
+    setDisplay(!display)
   }
   
   return (
@@ -23,18 +20,21 @@ const Product:FC<Props>= ({title,subtitle,children}) => {
         className={production.h2}
         onClick={()=>handleClick()}
       >{title}</h2>
-      <div 
-        className={production.box}
-        style={{display:display}}
-      >
-        {subtitle.map((item:string,index:number)=>(
+      <AnimatePresence>
+        {display?(
+          <div 
+            className={production.box}
+          >
+          {subtitle.map((item:string,index:number)=>(
           <div key={index}>
             <h3>{item}</h3>
             {children[index]}
           </div>
-        ))}
-        <p className={production.p}>画像が見づらい人は画像をクリック</p>
-      </div>
+          ))}
+          <p className={production.p}>画像が見づらい人は画像をクリック</p>
+          </div>
+        ):null}
+      </AnimatePresence>
       <p className={production.h1}>上記をクリック！</p>  
     </div>
   );
