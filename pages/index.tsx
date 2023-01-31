@@ -41,17 +41,17 @@ const Home: NextPage = () => {
       <div className="container text-center">
         <h1>menu</h1>
         <Menu name={linkname} detail={''}>
-          <ContactPageRoundedIcon className={home.icon}/>
-          <SchoolRoundedIcon className={home.icon}/>
-          <LaptopChromebookRoundedIcon className={home.icon}/>
-          <EditRoundedIcon className={home.icon}/>
-          <DirectionsRunRoundedIcon className={home.icon}/>
-          <TerminalRoundedIcon className={home.icon}/>
+          <ContactPageRoundedIcon />
+          <SchoolRoundedIcon />
+          <LaptopChromebookRoundedIcon />
+          <EditRoundedIcon />
+          <DirectionsRunRoundedIcon />
+          <TerminalRoundedIcon/>
         </Menu>
         <h1 >contact</h1>
         <Menu name={twitterName} detail={twitteraccountcoment}>
-          <TwitterIcon className={home.icon}/>
-          <TwitterIcon className={home.icon}/>
+          <TwitterIcon/>
+          <TwitterIcon/>
         </Menu>
       </div>
     </>

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { FC, ReactNode } from "react";
 import { link } from "../data/linkdata";
@@ -17,12 +18,16 @@ const Menu:FC<Props> = ({name,detail,children}) => {
     >
           <ol className={home.ol}>
             {name.map((item,index)=>(
-              <li key={index} className={home.li}>
+              <motion.li 
+                key={index} 
+                className="list-unstyled mt-4" 
+                whileHover={{ scale: 1.3 }}
+              >
                 <Link href={item.link} style={{color:"black"}} target={item.target}>
                   {children[index]}
                   <p className={home.pass}>{item.title}</p>
               </Link>
-            </li>
+            </motion.li>
             ))}
           </ol>
           <p>{detail}</p>
