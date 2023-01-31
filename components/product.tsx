@@ -1,6 +1,4 @@
 import { AnimatePresence } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
 import { FC, ReactNode, useState } from "react";
 import production from "./styles/Product.css";
 type Props={
