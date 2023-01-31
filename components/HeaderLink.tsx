@@ -16,7 +16,7 @@ const HeaderLink:FC<Props> = ({link,children}) => {
       <>    
         {link.map((item,index)=>(
           <div className={head.list} key={index}>
-            <Link href={item.link} target="_blank" aria-label={item.detail}>
+            <Link href={item.link} style={{color:"white"}} target="_blank" aria-label={item.detail}>
               {children[index]}<br/>
               {item.title}
             </Link>

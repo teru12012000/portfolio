@@ -36,12 +36,14 @@ const head={
 
 
   list:style({
+    color:"white",
     display:"inline-block",
     textAlign:"center",
     marginTop:"20px",
     marginLeft:"10px",
   }),
   icon:style({
+    color:"white",
     ':hover':{
       color:"aqua",
       transition:"0.4s"

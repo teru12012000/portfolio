@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       </Head>
       <Header open={"none"}/>
       <div className={home.first}>
-        <figure className={home.img}>
+        <figure className="rounded-circle">
           <Image
               src='/img/me.jpg'
               height={150}
@@ -38,8 +38,8 @@ const Home: NextPage = () => {
           私の自己紹介サイトになります。
         </p>
       </div>
-      <div className={home.content}>
-        <h1 >menu</h1>
+      <div className="container text-center">
+        <h1>menu</h1>
         <Menu name={linkname} detail={''}>
           <ContactPageRoundedIcon className={home.icon}/>
           <SchoolRoundedIcon className={home.icon}/>
