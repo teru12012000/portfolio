@@ -5,6 +5,11 @@ import skils from '../styles/skils.css'
 import { Skil } from '../data/skildata'
 import Image from 'next/image'
 import Back from '../components/Back'
+import Menucard from './Menucard';
+import { Card, Typography } from '@mui/material'
+import CardMedia from '@mui/material/CardMedia';
+import { motion } from 'framer-motion'
+
 const skil: NextPage = () => {
   return (
     <div>
@@ -14,25 +19,30 @@ const skil: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header open={"flex"}/>
-      <div className={skils.content} id="intro">
-        
-        <h1>言語とツール(ほんの少しでも触ったものも含む)</h1>
+      <Menucard title='言語とツール(ほんの少しでも触ったものも含む)'>
         {Skil.map((item,index)=>(
-          <div key={index} className={skils.box}>
-            <figure>
-              <Image
-                src={item.link}
-                alt='logo'
-                width={50}
-                height={50}
-                className={skils.img}
-              />
-            </figure>
-            <h2>{item.langage}</h2>
-            <p>{item.level}</p>
-          </div>
+            <motion.div 
+            key={index} 
+            className="d-inline-block m-4"
+            layoutId={String(index)}
+            >
+              <Card sx={{height:780,width:200}} className="text-start">
+                <CardMedia
+                  sx={{height:200}}
+                  image={item.link}
+                  title={item.langage}
+                />
+                <Typography gutterBottom variant="h4" component="div">
+                  {item.langage}
+                </Typography>
+                <Typography gutterBottom variant="h5" component="div">
+                  {item.level}
+                </Typography>
+              </Card> 
+            </motion.div>
         ))}
-     </div>
+    </Menucard>
+      
     </div>
   )
 }
