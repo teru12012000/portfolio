@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
 import intro from '../styles/profile.css'
-import { my_intro } from '../data/profiledata'
+import { my_intro, my_profile } from '../data/profiledata'
 import { Card, Typography } from '@mui/material'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react';
@@ -40,7 +40,7 @@ const Profile: NextPage = () => {
       </Head>
       <Header open={"flex"}/>
       <Menucard title='自己紹介' marginSize={true}>
-        {my_intro.map((item,index)=>(
+        {my_intro.map((item:my_profile,index:number)=>(
           <motion.div 
             key={index} 
             className="d-inline-block m-4"

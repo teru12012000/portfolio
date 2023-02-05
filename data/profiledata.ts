@@ -1,4 +1,4 @@
-type my_profile={
+export type my_profile={
   question:string;
   answer:string;
   detail:string;

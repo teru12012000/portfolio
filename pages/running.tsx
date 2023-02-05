@@ -1,9 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import Header from '../components/Header'
-import home from '../styles/Home.css'
-import run from '../styles/running.css';
 import { best, goal, mybest } from '../data/pbdata'
 import { Card, Paper, styled, Table, TableBody, TableCell, tableCellClasses, TableContainer, TableHead, TableRow, Typography } from '@mui/material'
 import Menucard from './Menucard'
@@ -17,8 +14,6 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     fontSize: 21,
   },
 }));
-
-
 
 const Run: NextPage = () => {
   return (
