@@ -8,18 +8,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import {useState} from "react";
 import Animate from '../components/Animate'
 import Menucard from './Menucard'
-const style = {
-  position: 'absolute' as 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: "50%",
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  borderRudius:"10%",
-  boxShadow: 24,
-  p: 4,
-};
 const Skils: NextPage = () => {
   const [selectId,setSelectId]=useState<string|null>(null);
   const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false);
