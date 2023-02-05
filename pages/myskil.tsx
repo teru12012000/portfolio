@@ -1,16 +1,32 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
-import skils from '../styles/skils.css'
 import { Skil } from '../data/skildata'
-import Image from 'next/image'
-import Back from '../components/Back'
-import Menucard from './Menucard';
-import { Card, Typography } from '@mui/material'
+import { Card, Modal,Typography } from '@mui/material'
 import CardMedia from '@mui/material/CardMedia';
-import { motion } from 'framer-motion'
-
-const skil: NextPage = () => {
+import { AnimatePresence, motion } from 'framer-motion'
+import {useState} from "react";
+import Animate from '../components/Animate'
+import Menucard from './Menucard'
+const style = {
+  position: 'absolute' as 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: "50%",
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  borderRudius:"10%",
+  boxShadow: 24,
+  p: 4,
+};
+const Skils: NextPage = () => {
+  const [selectId,setSelectId]=useState<string|null>(null);
+  const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false);
+  const openmodal=(id:string)=>{
+    setSelectId(id);
+    setEditModalIsOpen(true);
+  }
   return (
     <div>
       <Head>
@@ -25,8 +41,9 @@ const skil: NextPage = () => {
             key={index} 
             className="d-inline-block m-4"
             layoutId={String(index)}
+            onClick={()=>openmodal(String(index))}
             >
-              <Card sx={{height:780,width:200}} className="text-start">
+              <Card sx={{height:250,width:200}} className="text-start">
                 <CardMedia
                   sx={{height:200}}
                   image={item.link}
@@ -35,16 +52,30 @@ const skil: NextPage = () => {
                 <Typography gutterBottom variant="h4" component="div">
                   {item.langage}
                 </Typography>
-                <Typography gutterBottom variant="h5" component="div">
-                  {item.level}
-                </Typography>
               </Card> 
             </motion.div>
         ))}
-    </Menucard>
-      
+        <Animate
+          selectId={selectId}
+          editModalIsOpen={editModalIsOpen}
+          setSelectId={setSelectId}
+          setEditModalIsOpen={setEditModalIsOpen}
+        >
+          <CardMedia
+            sx={{height:100,width:100,margin:"auto"}}
+            image={Skil[Number(selectId)].link}
+            title={Skil[Number(selectId)].langage}
+          />
+          <Typography gutterBottom variant="h5" component="div">
+            {Skil[Number(selectId)].langage}
+          </Typography>
+          <Typography gutterBottom component="div">
+            {Skil[Number(selectId)].level}
+          </Typography>
+        </Animate>
+      </Menucard>
     </div>
   )
 }
 
-export default skil
+export default Skils

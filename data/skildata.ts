@@ -1,4 +1,4 @@
-type lang={
+export type lang={
   langage:string;
   level:string;
   link:string;
