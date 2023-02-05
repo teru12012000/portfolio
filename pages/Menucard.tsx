@@ -2,15 +2,16 @@ import intro from "../styles/profile.css";
 import {FC, ReactNode} from "react";
 type Props={
   title:string;
+  marginSize:boolean;
   children: ReactNode;
 }
-const Menucard:FC<Props> = ({title,children}) => {
+const Menucard:FC<Props> = ({title,marginSize,children}) => {
   return (
     <div className="container">
         <h2 
           className={intro.h2}
           style={{
-            marginTop:"200px",
+            marginTop:marginSize?"200px":"50px",
           }}
         >
           {title}

@@ -39,7 +39,7 @@ const Profile: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header open={"flex"}/>
-      <Menucard title='自己紹介'>
+      <Menucard title='自己紹介' marginSize={true}>
         {my_intro.map((item,index)=>(
           <motion.div 
             key={index} 

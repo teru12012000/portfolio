@@ -1,4 +1,4 @@
-type best={
+export type best={
   distance:string;
   time:string;
 }
@@ -20,4 +20,9 @@ export  const mybest:best[]=[
     distance:'ハーフマラソン',
     time:'76分11秒',
   },
+]
+
+export const goal:string[]=[
+  '常に自己ベストを狙う',
+  '走ることを楽しむ'
 ]

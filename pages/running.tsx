@@ -4,8 +4,21 @@ import Image from 'next/image'
 import Header from '../components/Header'
 import home from '../styles/Home.css'
 import run from '../styles/running.css';
-import Back from '../components/Back'
-import { mybest } from '../data/pbdata'
+import { best, goal, mybest } from '../data/pbdata'
+import { Card, Paper, styled, Table, TableBody, TableCell, tableCellClasses, TableContainer, TableHead, TableRow, Typography } from '@mui/material'
+import Menucard from './Menucard'
+//table装飾のための設定
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 21,
+  },
+}));
+
+
 
 const Run: NextPage = () => {
   return (
@@ -16,59 +29,50 @@ const Run: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header open={"flex"}/>
-      <div className={home.first}>
-        
-        <figure className={run.img}>
-            <Image
-              src='/img/running.jpg'
-              height={150}
-              width={150}
-              alt='logo'
-              className={run.img2}
-            />
-        </figure>
+      <div 
+        className="container text-center w-80"
+        style={{
+          marginTop:"200px",
+        }}
+      >
         <h1>ランニングについて</h1>
         <p>
           私は高校、大学の部活動で陸上競技の長距離種目
           をやってきました。
         </p>
-        <div className={run.content}>
+        <div>
           <h2>自己ベスト</h2>
-          <ol className={run.ol}>
-            {mybest.map((item,index)=>(
-              <li key={index} className={run.li}>
-                {item.distance}:{item.time}
-              </li>
+          <TableContainer component={Paper}>
+            <Table aria-label="customized table">
+              <TableHead>
+                <TableRow>
+                  <StyledTableCell align='center'>Event</StyledTableCell>
+                  <StyledTableCell align='center'>Personal Best</StyledTableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {mybest.map((item:best,index:number)=>(
+                  <TableRow key={index}>
+                    <StyledTableCell align='center'>{item.distance}</StyledTableCell>
+                    <StyledTableCell align='center'>{item.time}</StyledTableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </div>
+        <div
+          style={{marginBottom:"40px",marginTop:"10px"}}
+        >
+          <Menucard title='目標' marginSize={false}>
+            {goal.map((item:string,index:number)=>(
+                <Card sx={{height:100,width:200}}  key={index} className="text-center d-inline-block m-3">
+                  <Typography gutterBottom variant="h4" component="div" >
+                    {item}
+                  </Typography>
+                </Card> 
             ))}
-          </ol>
-        </div>
-        <div className={run.content}>
-          <h2>箱根駅伝予選会</h2>
-          <p className={run.pass}>
-            98回99回大会に参加しました。<br/>
-            どちらの大会も悔しい結果に終わってしまいました。<br/>
-            98回は8kの脱水でゴール後救急搬送されるということに...<br/>
-            99回はリベンジを誓ったが14kで足をつってしまい
-            思うように走れませんでした。しかしこの大会に出れたことは良い経験になりました。<br/>
-            納得のいく結果を出すことのできない弱いランナーではあるが、
-            この悔しさをこれからの走りにぶつけてさらに自身の成長につなげていきたいです。
-          </p>
-        </div>
-        <div className={run.content}>
-          <h2>目標</h2>
-          <p className={run.pass}>
-            大学での目標は箱根駅伝予選会で良い走りをすることでした。<br/>
-            箱根駅伝予選会が終わりこれからの目標は<br/>
-            <span className={run.span}>
-            「自分の体がつぶれない限り、
-            自己ベストを狙っていく」<br/>
-            「走ることを楽しんでいく！」<br/>
-            </span>
-            にしたいと思います。<br/>
-            走ることはほんとに楽しいと感じます。<br/>
-            良い結果を出すとより楽しさを増します。<br/>
-            せっかくやるならこれからも記録を狙って頑張っていこうと思っています。
-          </p>
+          </Menucard>
         </div>
       </div>
       

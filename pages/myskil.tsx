@@ -19,7 +19,7 @@ const skil: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header open={"flex"}/>
-      <Menucard title='言語とツール(ほんの少しでも触ったものも含む)'>
+      <Menucard title='言語とツール(ほんの少しでも触ったものも含む)' marginSize={true}>
         {Skil.map((item,index)=>(
             <motion.div 
             key={index} 
