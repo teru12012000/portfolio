@@ -16,6 +16,7 @@
 - vanilla-extract
 - bootstrap
 - material-ui
+- framer-motion
 
 ## 今後のタスク
 
