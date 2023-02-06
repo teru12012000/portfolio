@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
 import { Skil } from '../data/skildata'
-import { Card, Modal,Typography } from '@mui/material'
+import { Card,Typography } from '@mui/material'
 import CardMedia from '@mui/material/CardMedia';
 import { AnimatePresence, motion } from 'framer-motion'
 import {useState} from "react";
@@ -11,6 +11,7 @@ import Menucard from '../components/Menucard'
 const Skils: NextPage = () => {
   const [selectId,setSelectId]=useState<string|null>(null);
   const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false);
+  
   const openmodal=(id:string)=>{
     setSelectId(id);
     setEditModalIsOpen(true);
@@ -26,12 +27,12 @@ const Skils: NextPage = () => {
       <Menucard title='言語とツール(ほんの少しでも触ったものも含む)' marginSize={true}>
         {Skil.map((item,index)=>(
             <motion.div 
-            key={index} 
-            className="d-inline-block m-4"
-            layoutId={String(index)}
-            onClick={()=>openmodal(String(index))}
+              key={index} 
+              className="d-inline-block m-4"
+              layoutId={String(index)}
+              onClick={()=>openmodal(String(index))}
             >
-              <Card sx={{height:250,width:200}} className="text-start">
+              <Card sx={{height:250,width:200}} className="text-start" onClick={()=>openmodal(String(index))}>
                 <CardMedia
                   sx={{height:200}}
                   image={item.link}

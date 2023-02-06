@@ -15,10 +15,6 @@ const Profile: NextPage = () => {
     setSelectId(id);
     setEditModalIsOpen(true);
   }
-  const closemodal=()=>{
-    setEditModalIsOpen(false);
-    setSelectId(null);
-  }
 
   return (
     <div>

@@ -22,19 +22,25 @@ type Props={
 const Hambargar:FC<Props> = ({linkname}) => {
   
   const [dis, setDis] = useState<boolean>(false);
+  const [hei,setHeight]=useState<string|number|undefined>("0");
   const [color, setColor] = useState<string>("transparent");
   const handleClick = () => {
     setDis(!dis)
     if (!dis) {
       setColor("white")
+      setHeight("100vh")
     } else {
       setColor("transparent")
+      setHeight("0")
     }
   }
   return (
     <div
         className={head.hamlist}
-        style={{ backgroundColor: color, }}
+        style={{ 
+          backgroundColor: color,
+          height: hei, 
+        }}
       >
       <div className="text-end">
       <IconButton aria-label="menu"  onClick={() => handleClick()}>

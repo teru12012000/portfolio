@@ -6,6 +6,7 @@ type Props={
   children: ReactNode;
 }
 const Menucard:FC<Props> = ({title,marginSize,children}) => {
+  
   return (
     <div className="container">
       <h2 
