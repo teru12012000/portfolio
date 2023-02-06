@@ -1,8 +1,6 @@
-import { Card, Modal, Typography } from "@mui/material";
+import { Card, Modal } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
 import { Dispatch, FC, SetStateAction, useState,ReactNode } from "react";
-import { my_profile } from "../data/profiledata";
-import { lang } from "../data/skildata";
 type Props={
   selectId:string|null;
   editModalIsOpen:boolean;

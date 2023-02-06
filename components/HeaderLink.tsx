@@ -5,19 +5,18 @@ import head from "./styles/header.css";
 
 type Props={
   link:Headlink[],
-  children:ReactNode[],
 }
 
 
 
 
-const HeaderLink:FC<Props> = ({link,children}) => {
+const HeaderLink:FC<Props> = ({link}) => {
   return (  
       <>    
         {link.map((item,index)=>(
           <div className={head.list} key={index}>
             <Link href={item.link} style={{color:"white"}} target="_blank" aria-label={item.detail}>
-              {children[index]}<br/>
+              {item.icon}<br/>
               {item.title}
             </Link>
           </div>

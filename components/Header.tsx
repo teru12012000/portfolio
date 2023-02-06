@@ -3,11 +3,11 @@ import head from './styles/header.css';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import HeaderLink from './HeaderLink';
-import { headerlinkName } from '../data/linkdata';
 import Back from './Back';
 import { FC } from 'react';
 import Hambargar from './Hambargar';
 import linkname from '../data/linkname';
+import headerlinkName from '../data/headerlink';
 
 type Props = {
   open: string;
@@ -20,11 +20,8 @@ const Header: FC<Props> = ({ open }) => {
       <header className={head.header}>
         <h1>TERUSI</h1>
         <div>
-          <HeaderLink link={headerlinkName}>
-            <GitHubIcon className={head.icon} />
-            <TwitterIcon className={head.icon} />
-            <TwitterIcon className={head.icon} />
-          </HeaderLink>
+          <HeaderLink link={headerlinkName}/>
+            
         </div>
       </header>
       <div style={{ display: open, width: "100%", justifyContent: "space-between" }}>

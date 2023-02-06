@@ -4,7 +4,6 @@ import DirectionsRunRoundedIcon from '@mui/icons-material/DirectionsRunRounded';
 import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import TerminalRoundedIcon from '@mui/icons-material/TerminalRounded';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import { ReactNode } from 'react';
 type link={
   link:string;
