@@ -1,10 +1,11 @@
 import { FC, ReactNode, useState } from "react";
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import head from "./styles/header.css";
-import { IconButton, Link, List, ListItemButton, ListItemIcon, ListItemText, ListSubheader } from "@mui/material";
+import { IconButton, List, ListItemButton, ListItemIcon, ListItemText, ListSubheader } from "@mui/material";
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import { AnimatePresence } from "framer-motion";
 import { grey, red } from "@mui/material/colors";
+import Link from "next/link";
 type Headlink={
   link:string;
   title:string;
@@ -72,7 +73,7 @@ const Hambargar:FC<Props> = ({linkname}) => {
                       <Link href={item.link} 
                         key={index} 
                         target={item.target}
-                        underline="none"
+                        style={{textDecoration:"none",color:"black"}}
                       >
                         <ListItemButton>
                           <ListItemIcon>
