@@ -3,17 +3,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Header'
 import home from '../styles/Home.css'
-import ContactPageRoundedIcon from '@mui/icons-material/ContactPageRounded';
-import LaptopChromebookRoundedIcon from '@mui/icons-material/LaptopChromebookRounded';
-import DirectionsRunRoundedIcon from '@mui/icons-material/DirectionsRunRounded';
-import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import Menu from '../components/Menu'
-import EditRoundedIcon from '@mui/icons-material/EditRounded';
-import TerminalRoundedIcon from '@mui/icons-material/TerminalRounded';
-import { linkname, twitteraccountcoment, twitterName } from '../data/linkdata'
+import linkname from '../data/linkname'
+import twitterName from '../data/twitterlink'
 const Home: NextPage = () => {
-  
   return (
     <>
       <Head>
@@ -40,19 +33,9 @@ const Home: NextPage = () => {
       </div>
       <div className="container text-center">
         <h1>menu</h1>
-        <Menu name={linkname} detail={''}>
-          <ContactPageRoundedIcon />
-          <SchoolRoundedIcon />
-          <LaptopChromebookRoundedIcon />
-          <EditRoundedIcon />
-          <DirectionsRunRoundedIcon />
-          <TerminalRoundedIcon/>
-        </Menu>
+        <Menu name={linkname} detail={''}/>  
         <h1 >contact</h1>
-        <Menu name={twitterName} detail={twitteraccountcoment}>
-          <TwitterIcon/>
-          <TwitterIcon/>
-        </Menu>
+        <Menu name={twitterName} detail={'連絡の際はどちらのアカウントでも構いません。'}/>
       </div>
     </>
   )

@@ -7,11 +7,10 @@ import home from "../styles/Home.css";
 type Props={
   name:link[];
   detail:string;
-  children:ReactNode[];
 }
 
 
-const Menu:FC<Props> = ({name,detail,children}) => {
+const Menu:FC<Props> = ({name,detail}) => {
   return (
     <div 
       className="container border border-dark rounded-3 w-50 mw-auto "
@@ -24,7 +23,7 @@ const Menu:FC<Props> = ({name,detail,children}) => {
                 whileHover={{ scale: 1.3 }}
               >
                 <Link href={item.link} style={{color:"black"}} target={item.target}>
-                  {children[index]}
+                  {item.icon}
                   <p className={home.pass}>{item.title}</p>
               </Link>
             </motion.li>

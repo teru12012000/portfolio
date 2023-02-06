@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import { best, goal, mybest } from '../data/pbdata'
 import { Card, Paper, styled, Table, TableBody, TableCell, tableCellClasses, TableContainer, TableHead, TableRow, Typography } from '@mui/material'
-import Menucard from './Menucard'
+import Menucard from '../components/Menucard'
 //table装飾のための設定
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {

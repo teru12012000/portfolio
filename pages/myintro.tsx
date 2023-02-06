@@ -6,7 +6,7 @@ import { my_intro, my_profile } from '../data/profiledata'
 import { Card, Modal, Typography } from '@mui/material'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react';
-import Menucard from './Menucard'
+import Menucard from '../components/Menucard'
 import Animate from '../components/Animate';
 const Profile: NextPage = () => {
   const [selectId,setSelectId]=useState<string|null>(null);

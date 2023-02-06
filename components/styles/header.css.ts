@@ -17,6 +17,8 @@ const head={
   hamlist:style({
     zIndex:"500px",
     paddingTop:"20px",
+    height:"100vh",
+    width:"20%", 
     '@media':{
       'screen and (max-width:500px)':{
         width:"100%",
@@ -26,7 +28,6 @@ const head={
   hamul:style({
     overflow:"auto",
     zIndex:"200px",
-    height:"450px",
     backgroundColor:"white",
     '::-webkit-scrollbar':{
       display:"none",

@@ -7,7 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import { AnimatePresence, motion } from 'framer-motion'
 import {useState} from "react";
 import Animate from '../components/Animate'
-import Menucard from './Menucard'
+import Menucard from '../components/Menucard'
 const Skils: NextPage = () => {
   const [selectId,setSelectId]=useState<string|null>(null);
   const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false);
