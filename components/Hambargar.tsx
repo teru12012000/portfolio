@@ -1,10 +1,10 @@
-import Link from "next/link";
 import { FC, ReactNode, useState } from "react";
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import head from "./styles/header.css";
-import { IconButton } from "@mui/material";
+import { IconButton, Link, List, ListItemButton, ListItemIcon, ListItemText, ListSubheader } from "@mui/material";
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import { AnimatePresence } from "framer-motion";
+import { grey, red } from "@mui/material/colors";
 type Headlink={
   link:string;
   title:string;
@@ -58,27 +58,32 @@ const Hambargar:FC<Props> = ({linkname}) => {
           <div>
             <AnimatePresence>
               {dis?(
-                <ul
-                className={head.hamul}
-                >
-                  {linkname.map((item: link, index: number) => (
-                    <li
-                      key={index}
-                      style={{
-                        listStyle: "none",
-                        padding: "20px",
-                        textAlign: "center",
-                        borderBottom: "2px solid gray",
-                      }}
-                    >
-                      <Link href={item.link} target={item.target}>
-                        
-                        {item.icon}
-                        {item.title}
+                <>
+                  <List
+                    className={head.hamul}
+                    aria-labelledby="menu"
+                    subheader={
+                      <ListSubheader component="div" id="nested-list-subheader" className="text-start">
+                        Pages
+                      </ListSubheader>
+                    }
+                  >
+                    {linkname.map((item:link,index:number)=>(
+                      <Link href={item.link} 
+                        key={index} 
+                        target={item.target}
+                        underline="none"
+                      >
+                        <ListItemButton>
+                          <ListItemIcon>
+                            {item.icon}
+                          </ListItemIcon>
+                          <ListItemText primary={item.title} color={grey[900]}/>
+                        </ListItemButton>
                       </Link>
-                    </li>
-                  ))}
-                </ul>
+                    ))}
+                  </List>
+                </>
               ):null}  
             </AnimatePresence>
           </div>
