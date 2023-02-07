@@ -10,7 +10,7 @@ const Back: NextPage = () => {
         <Link href="/">
           <IconButton>
             <OtherHousesRoundedIcon
-              sx={{fontSize:45}}
+              sx={{fontSize:40,color:"black"}}
             />
           </IconButton>
         </Link>

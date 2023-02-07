@@ -47,11 +47,11 @@ const Hambargar:FC<Props> = ({linkname}) => {
       <IconButton aria-label="menu"  onClick={() => handleClick()}>
         {!dis?(
           <MenuRoundedIcon
-            sx={{ fontSize: 40 }}
+            sx={{ fontSize: 40,color:"black"}}
           />
         ):(
           <CloseRoundedIcon
-            sx={{ fontSize: 40 }}
+            sx={{ fontSize: 40 ,color:"black"}}
           />
         )}
       </IconButton>
