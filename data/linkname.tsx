@@ -5,6 +5,10 @@ import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import TerminalRoundedIcon from '@mui/icons-material/TerminalRounded';
 import { ReactNode } from 'react';
+const style={
+  color:"black",
+  fontSize:20,
+}
 type link={
   link:string;
   title:string;
@@ -16,37 +20,37 @@ const linkname:link[]=[
     link:"/myintro",
     title:"プロフィール",
     target:"",
-    icon:(<ContactPageRoundedIcon/>)
+    icon:(<ContactPageRoundedIcon sx={style}/>)
   },
   {
     link:"/univercity",
     title:"大学",
     target:"",
-    icon:(<SchoolRoundedIcon />)
+    icon:(<SchoolRoundedIcon sx={style}/>)
   },
   {
     link:"/myskil",
     title:"スキル",
     target:"",
-    icon:(<LaptopChromebookRoundedIcon />)
+    icon:(<LaptopChromebookRoundedIcon  sx={style}/>)
   },
   {
     link:"https://blog-phi-nine-26.vercel.app/",
     title:"blog(外部リンク)",
     target:"_blank",
-    icon:(<EditRoundedIcon />)
+    icon:(<EditRoundedIcon sx={style}/>)
   },
   {
     link:"/running",
     title:"ランニング",
     target:"",
-    icon:(<DirectionsRunRoundedIcon />)
+    icon:(<DirectionsRunRoundedIcon sx={style}/>)
   },
   {
     link:"/Production",
     title:"制作物",
     target:"",
-    icon:(<TerminalRoundedIcon/>)
+    icon:(<TerminalRoundedIcon sx={style}/>)
   },
 ]
 

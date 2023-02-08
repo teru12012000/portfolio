@@ -1,9 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
-import { best, goal, mybest } from '../data/pbdata'
+import { best, goal, goaldata, mybest } from '../data/pbdata'
 import { Card, Paper, styled, Table, TableBody, TableCell, tableCellClasses, TableContainer, TableHead, TableRow, Typography } from '@mui/material'
 import Menucard from '../components/Menucard'
+import { motion } from 'framer-motion'
+import { useState } from 'react'
+import Animate from '../components/Animate'
 //table装飾のための設定
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -16,6 +19,12 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 const Run: NextPage = () => {
+  const [selectId,setSelectId]=useState<string|null>(null);
+  const [editModalIsOpen, setEditModalIsOpen] = useState<boolean>(false);
+  const openmodal=(id:string)=>{
+    setSelectId(id);
+    setEditModalIsOpen(true);
+  }
   return (
     <>
       <Head>
@@ -60,13 +69,33 @@ const Run: NextPage = () => {
           style={{marginBottom:"40px",marginTop:"10px"}}
         >
           <Menucard title='目標' marginSize={false}>
-            {goal.map((item:string,index:number)=>(
-                <Card sx={{height:100,width:200}}  key={index} className="text-center d-inline-block m-3">
+            {goal.map((item:goaldata,index:number)=>(
+              <motion.div
+                key={index}
+                className="d-inline-block m-4"
+                layoutId={String(index)}
+                onClick={()=>openmodal(String(index))}
+              >
+                <Card sx={{height:100,width:200}}  className="text-center d-inline-block m-3">
                   <Typography gutterBottom variant="h4" component="div" >
-                    {item}
+                    {item.goal}
                   </Typography>
-                </Card> 
+                </Card>
+              </motion.div>
             ))}
+            <Animate
+              selectId={selectId}
+              editModalIsOpen={editModalIsOpen}
+              setSelectId={setSelectId}
+              setEditModalIsOpen={setEditModalIsOpen}
+            >
+              <Typography gutterBottom variant="h4" component="div">
+                {goal[Number(selectId)].goal}
+              </Typography>
+              <Typography gutterBottom variant="h5" component="div">
+                {goal[Number(selectId)].detail}
+              </Typography>
+            </Animate>
           </Menucard>
         </div>
       </div>
