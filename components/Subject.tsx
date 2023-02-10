@@ -1,9 +1,8 @@
 import { FC } from "react";
-import { sub } from "../data/subjectdata";
 import univerce from "../styles/univercity.css";
 type Props={
   grade:string;
-  subject:sub[];
+  subject:string[];
   thought:string;
 }
 
@@ -15,7 +14,7 @@ const Subject:FC<Props> = ({grade,subject,thought}) => {
         <ul className={univerce.ul}>
           {subject.map((item,index)=>(
             <li key={index} className={univerce.li}>
-              {item.subject}
+              {item}
             </li>
           ))}
         </ul>
