@@ -6,11 +6,6 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import { AnimatePresence } from "framer-motion";
 import { grey, red } from "@mui/material/colors";
 import Link from "next/link";
-type Headlink={
-  link:string;
-  title:string;
-  detail:string;
-}
 type link={
   link:string;
   title:string;
@@ -36,7 +31,7 @@ const Hambargar:FC<Props> = ({linkname}) => {
     }
   }
   return (
-    <div
+      <div
         className={head.hamlist}
         style={{ 
           backgroundColor: color,

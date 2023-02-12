@@ -28,39 +28,20 @@ export const minesweeper:productionlink[]=[
     link:"/product_image/mine.jpg",
     width:"250px",
     height:"400px",
-    title:"ゲーム進行中の画面",
-  },
-  {
-    link:"/product_image/mine2.jpg",
-    width:"250px",
-    height:"100px",
-    title:"クリアの画面",
+    title:"ゲーム進行中の画面(1)",
   },
   {
     link:"/product_image/mine3.jpg",
     width:"250px",
     height:"100px",
-    title:"ゲーム進行中の画面",
+    title:"ゲーム進行中の画面(2)",
   },
 ]
 
-export const numeron:productionlink[]=[
-  {
-    link:"/product_image/cuinumeron.jpg",
-    width:"250px",
-    height:"100px",
-    title:"ゲームの画面",
-  },
-]
+export const numeron:productionlink[]=[]
 
 
 export const numeronweb:productionlink[]=[
-  {
-    link:"/product_image/numeronweb3.jpg",
-    width:"250px",
-    height:"100px",
-    title:"オープニングの画面",
-  },
   {
     link:"/product_image/numeronweb2.jpg",
     width:"250px",
@@ -75,12 +56,6 @@ export const numeronweb:productionlink[]=[
   },
 ]
 export const jobhunting:productionlink[]=[
-  {
-    link:"/product_image/jobhuntingweb1.jpg",
-    width:"250px",
-    height:"100px",
-    title:"ホーム画面",
-  },
   {
     link:"/product_image/interview.jpg",
     width:"250px",
@@ -113,4 +88,32 @@ export const desktopapp:productionlink[]=[
     height:"100px",
     title:"Excelに記録されている！",
   },
+]
+export type carddeta={
+  link:string;
+  title:string;
+  language:string;
+}
+export const titlePhoto:carddeta[]=[
+  {
+    link:"/product_image/mine2.jpg",
+    title:"minesweeper",
+    language:"C",
+  },{
+    link:"/product_image/cuinumeron.jpg",
+    title:"numeron",
+    language:"C++"
+  },{
+    link:"/product_image/numeronweb3.jpg",
+    title:"numeron(web版)",
+    language:"html,css,Javascript"
+  },{
+    link:"/product_image/jobhuntingweb1.jpg",
+    title:"就活レポート",
+    language:"Next.js(typescript),vanilla-extract"
+  },{
+    link:"/product_image/desktop2.jpg",
+    title:"ランニング練習記録",
+    language:"Python(Tkinter)"
+  }
 ]
