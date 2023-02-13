@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import Back from "../components/Back";
 import Header from "../components/Header";
@@ -11,7 +11,23 @@ import { Card, CardMedia } from "@mui/material";
 import { AnimatePresence, motion } from 'framer-motion'
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-const Production:NextPage = () => {
+import { client } from "../lib/client";
+import { productdata } from "../data/productdeta";
+export const getStaticProps:GetServerSideProps=async()=>{
+  const data=await client.get({endpoint:'terusi-product'});
+  return {
+    props:{
+      product:data.contents,
+    }
+  }
+}
+
+type Props={
+  product:productdata[]
+}
+
+
+const Production:NextPage<Props> = ({product}) => {
   return (
     <div style={{margin:"200px auto"}}>
       <Head>
@@ -21,15 +37,17 @@ const Production:NextPage = () => {
       <Header open={"flex"}/>
       <h1 className={production.h1}>制作物</h1>
       <div className="container">
-        {titlePhoto.map((item:carddeta,index:number)=>(
-          <motion.div
+        {product.map((item:productdata,index:number)=>(
+          <Link
+            href={`/Product/${item.id}`}
             key={index}
             className="d-inline-block m-4"
+            style={{textDecoration:"none"}}
           >
             <Card sx={{width:230,height:300}}>
             <CardMedia
               sx={{width:230,height:100}}
-              image={item.link}
+              image={item.image.url}
               title={item.title}
             />
             <CardContent>
@@ -41,7 +59,7 @@ const Production:NextPage = () => {
               </Typography>
             </CardContent>
             </Card>
-          </motion.div>
+          </Link>
         ))}
       </div>
     </div>
