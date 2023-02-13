@@ -41,13 +41,13 @@ const Product:NextPage<Props>= ({product}) => {
       </Head>
       <Header open={"flex"}/>
       <div 
-        className="container text-center"
+        className="container"
         style={{
           marginTop:"200px"
         }}
       >
         <h1 className="mb-5">{product.title}</h1>
-        <div className="border rounded border-dark" style={{fontSize:"20px"}} dangerouslySetInnerHTML={{__html:`${product.detail}`}}></div>
+        <div className="border rounded border-dark" style={{fontSize:"20px",padding:0}} dangerouslySetInnerHTML={{__html:`${product.detail}`}}></div>
       </div>
     </>
   );
