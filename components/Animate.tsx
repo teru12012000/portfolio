@@ -1,6 +1,7 @@
 import { Card, Modal } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
 import { Dispatch, FC, SetStateAction, useState,ReactNode } from "react";
+import { style } from "../data/Style";
 type Props={
   selectId:string|null;
   editModalIsOpen:boolean;
@@ -8,18 +9,7 @@ type Props={
   setEditModalIsOpen:Dispatch<SetStateAction<boolean>>;
   children:ReactNode;
 }
-const style = {
-  position: 'absolute' as 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: "80%",
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  borderRudius:"10%",
-  boxShadow: 24,
-  p: 4,
-};
+
 const Animate:FC<Props> = ({
   selectId,
   editModalIsOpen,

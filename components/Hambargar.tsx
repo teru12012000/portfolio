@@ -50,7 +50,6 @@ const Hambargar:FC<Props> = ({linkname}) => {
           />
         )}
       </IconButton>
-      
           <div>
             <AnimatePresence>
               {dis?(
