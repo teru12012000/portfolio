@@ -46,7 +46,11 @@ const Product:NextPage<Props>= ({product}) => {
           marginTop:"200px"
         }}
       >
-        <h1 className="mb-5 text-center">{product.title}</h1>
+        <div className="mb-5 text-center">
+          <h1 >{product.title}</h1>
+          <p style={{fontSize:"20px"}}>{product.language}</p>
+        </div>
+        
         <div className="border rounded border-dark" style={{fontSize:"20px",padding:0}} dangerouslySetInnerHTML={{__html:`${product.detail}`}}></div>
       </div>
     </>
