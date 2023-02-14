@@ -4,6 +4,8 @@ import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import { client } from "../../lib/client";
 import Head from "next/head";
 import Header from "../../components/Header";
+import { Button } from "@mui/material";
+import Link from "next/link";
 type Props={
   product:productdata
 }
@@ -50,8 +52,17 @@ const Product:NextPage<Props>= ({product}) => {
           <h1 >{product.title}</h1>
           <p style={{fontSize:"20px"}}>{product.language}</p>
         </div>
-        
         <div className="border rounded border-dark" style={{fontSize:"20px",padding:0}} dangerouslySetInnerHTML={{__html:`${product.detail}`}}></div>
+        <div 
+          className="mt-3 text-center"
+          style={{fontSize:"20px"}}
+        >
+          <Link href="/Production" >
+            <Button variant="text" size="large">
+              Back To List! 
+            </Button>
+          </Link>
+        </div>
       </div>
     </>
   );

@@ -38,28 +38,32 @@ const Production:NextPage<Props> = ({product}) => {
       <h1 className={production.h1}>制作物</h1>
       <div className="container">
         {product.map((item:productdata,index:number)=>(
-          <Link
-            href={`/Product/${item.id}`}
-            key={index}
+          <motion.div 
+            key={index} 
             className="d-inline-block m-4"
-            style={{textDecoration:"none"}}
+            whileHover={{ scale: 1.1 }}
           >
-            <Card sx={{width:230,height:300}}>
-            <CardMedia
-              sx={{width:230,height:100}}
-              image={item.image.url}
-              title={item.title}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                {item.title}
-              </Typography>
-              <Typography gutterBottom component="div">
-                {item.language}
-              </Typography>
-            </CardContent>
-            </Card>
-          </Link>
+            <Link
+              href={`/Product/${item.id}`}
+              style={{textDecoration:"none"}}
+            >
+              <Card sx={{width:230,height:300}}>
+                <CardMedia
+                  sx={{width:230,height:100}}
+                  image={item.image.url}
+                  title={item.title}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {item.title}
+                  </Typography>
+                  <Typography gutterBottom component="div">
+                    {item.language}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Link>
+          </motion.div>
         ))}
       </div>
     </div>
