@@ -1,6 +1,5 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import Back from "../components/Back";
 import Header from "../components/Header";
 import Subject from "../components/Subject";
 import { one, three, two } from "../data/subjectdata";
