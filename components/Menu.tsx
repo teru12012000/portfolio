@@ -22,7 +22,7 @@ const Menu:FC<Props> = ({name,detail}) => {
                 className="list-unstyled mt-4" 
                 whileHover={{ scale: 1.3 }}
               >
-                <Link href={item.link} style={{color:"black"}} target={item.target}>
+                <Link href={item.link} style={{color:"black",textDecoration:"none"}} target={item.target}>
                   {item.icon}
                   <p className={home.pass}>{item.title}</p>
               </Link>
