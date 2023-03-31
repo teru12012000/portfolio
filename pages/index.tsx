@@ -27,8 +27,7 @@ const Home: NextPage = () => {
         </figure>
         <p className={home.p}>
           はじめまして。TERUSIです。
-          現在大学4年生です。このサイトは
-          私の自己紹介サイトになります。
+          このサイトは私の自己紹介サイトになります。
         </p>
       </div>
       <div className="container text-center">
