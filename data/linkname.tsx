@@ -34,12 +34,12 @@ const linkname:link[]=[
     target:"",
     icon:(<LaptopChromebookRoundedIcon  sx={style}/>)
   },
-  {
+  /*{
     link:"https://blog-phi-nine-26.vercel.app/",
     title:"blog(外部リンク)",
     target:"_blank",
     icon:(<EditRoundedIcon sx={style}/>)
-  },
+  },*/
   {
     link:"/running",
     title:"ランニング",
